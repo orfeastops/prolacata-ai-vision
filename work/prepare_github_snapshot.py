@@ -172,7 +172,7 @@ def main():
     handoff=ROOT/'work/project_handoff'
     assert (handoff/'README.md').exists(),'English handoff documents are required'
     for p in handoff.iterdir():
-        if p.is_file() and p.suffix.lower() in ('.md','.json'):
+        if p.is_file() and p.suffix.lower() in ('.md','.json','.py'):
             (OUT/p.name).write_text(sanitize(p.read_text(encoding='utf-8')),encoding='utf-8')
     (OUT/'.gitignore').write_text('.venv/\n__pycache__/\n*.pyc\n.env\n.env.*\nwork/facility_media/\nwork/unseen_test_20260926/\nwork/feta_env/\noutputs/\n',encoding='utf-8')
     packages=['numpy','opencv-python','Pillow','torch','torchvision','ultralytics','transformers','safetensors','imageio-ffmpeg']
