@@ -2,6 +2,8 @@
 
 Snapshot date: **2026-10-27**, Europe/Athens.
 
+**Latest handoff:** The owner will continue with Claude. Read [CLAUDE_HANDOFF.md](CLAUDE_HANDOFF.md) first. C02 feedback arrived during publication and is preserved in the root `EXPERT_FEEDBACK_C02.json` and raw export. Those newer root records supersede the earlier pending-C02 description below and older restored handoff copies. The assistant should perform frame extraction and initial visual annotation autonomously, using the expert anchors and asking only about unresolved ambiguity.
+
 ## The user's operational objective
 
 Camera 11 shows two workers taking whole feta blocks from conveyor trays and filling a tank. A separate stationary tank receives crumbs. Another worker removes a filled tank, brings it into camera 15 near the door, weighs it, then stores it in the aging room. Camera 15 contains both empty and full tanks. Full tanks often have a visible white top and are placed together, but appearance alone was previously misinterpreted and is not a verified inventory count.

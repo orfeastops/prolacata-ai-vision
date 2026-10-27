@@ -12,7 +12,7 @@
     2,
     5
   ],
-  "next_task": "Collect C02-C06 feedback; link expert transfers to visible object/group annotations before new training. C01 final two releases are at 30.74 and 33.30, outside its original clip.",
+  "next_task": "Read CLAUDE_HANDOFF.md; use C01/C02 expert anchors for autonomous visual annotation; review the C02 action/quantity conflict and cut-off transfer from source video without presuming counts.",
   "annotation_batch": [
     {
       "clip_id": "C01",
@@ -25,7 +25,8 @@
       "clip_id": "C02",
       "date": "2026-10-01",
       "source_sha256": "8b27120cb2f2712c4b3a243a149f0c4683641507388902275e9e52dbcfea22e6",
-      "expert_review_complete": false
+      "expert_review_complete": false,
+      "expert_feedback_file": "EXPERT_FEEDBACK_C02.json"
     },
     {
       "clip_id": "C03",
@@ -75,5 +76,18 @@
     "blocks_released_after_original_clip": 2,
     "annotated_blocks_released_within_original_clip": 18
   },
-  "C01_boundary_resolved": true
+  "C01_boundary_resolved": true,
+  "handoff_target": "Claude or another coding/vision assistant chosen by the user",
+  "review_preference": "Assistant performs frame extraction, visual inspection and draft labeling autonomously; ask the user only about unresolved domain ambiguity, not every movement.",
+  "C02_feedback_received": true,
+  "C02_feedback_summary": {
+    "entries": 14,
+    "completed_positive_transfers": 7,
+    "annotated_blocks_in_completed_transfers": 14,
+    "no_new_block_or_scrap_rows": 6,
+    "boundary_censored_transfers": 1,
+    "boundary_censored_carried_quantity": 2,
+    "raw_quantity_action_conflicts": 1,
+    "independently_confirmed_whole_clip_total": null
+  }
 }
