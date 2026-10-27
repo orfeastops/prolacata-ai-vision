@@ -1,0 +1,75 @@
+{
+  "snapshot_date": "2026-10-27",
+  "production_ready": false,
+  "live_cameras_connected": false,
+  "latest_completed_experiment": "placement_counter_v3/native_temporal_diagnostic",
+  "latest_source_held_out_mae": 2.364043176174164,
+  "latest_positive_exact": [
+    1,
+    7
+  ],
+  "latest_zero_false_positive": [
+    2,
+    5
+  ],
+  "next_task": "Resolve C01 final release boundary; collect C02-C06 feedback; link expert transfers to visible object/group annotations before new training",
+  "annotation_batch": [
+    {
+      "clip_id": "C01",
+      "date": "2026-10-01",
+      "source_sha256": "3b97807568b8bda51f60f7924b2fd667f0e698b6d649b4c88a2717ac8f5241ec",
+      "expert_review_complete": false,
+      "expert_feedback_file": "EXPERT_FEEDBACK_C01.json"
+    },
+    {
+      "clip_id": "C02",
+      "date": "2026-10-01",
+      "source_sha256": "8b27120cb2f2712c4b3a243a149f0c4683641507388902275e9e52dbcfea22e6",
+      "expert_review_complete": false
+    },
+    {
+      "clip_id": "C03",
+      "date": "2026-10-01",
+      "source_sha256": "4f0cff8e3ea04eca7c722d6a5e50da1ef36b5fc9b6eba41d82709a61ccdf1154",
+      "expert_review_complete": false
+    },
+    {
+      "clip_id": "C04",
+      "date": "2026-10-21",
+      "source_sha256": "1038124164c6533f084b98433a9cdef4241010df38a41716164900088f3068ce",
+      "expert_review_complete": false
+    },
+    {
+      "clip_id": "C05",
+      "date": "2026-10-21",
+      "source_sha256": "1fb299d9840871c710c9bcf718eea2d3f4032add39cc46dab96c29499422ea2e",
+      "expert_review_complete": false
+    },
+    {
+      "clip_id": "C06",
+      "date": "2026-10-21",
+      "source_sha256": "4db57f7a58b33186e6120ff62cbde4dc9d14df830eca7cd3ab231bd6f702f23d",
+      "expert_review_complete": false
+    }
+  ],
+  "no_active_training_job_started_for_v4": true,
+  "no_ground_truth_inferred_from_missing_review_entries": true,
+  "september_excluded_from_training": true,
+  "september_previously_inspected_for_error_analysis": true,
+  "october3_reserved_for_evaluation": true,
+  "automatic_tank_switching_complete": false,
+  "cross_camera_tank_association_complete": false,
+  "camera_wall_clock_verified": false,
+  "raw_camera_media_is_external_dependency": true,
+  "C01_feedback_received": true,
+  "C01_feedback_summary": {
+    "reviewer_entries": 10,
+    "unambiguous_completed_transfer_rows": 8,
+    "blocks_in_those_rows": 18,
+    "three_block_transfer_rows": 3,
+    "boundary_uncertain_transfer_rows": 1,
+    "boundary_uncertain_quantity": 2,
+    "no_new_block_observations": 1,
+    "whole_clip_total_confirmed": null
+  }
+}

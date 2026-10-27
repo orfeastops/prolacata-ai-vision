@@ -1,0 +1,200 @@
+{
+  "production_ready": false,
+  "locally_available_checkpoints": [
+    {
+      "path": "outputs/facility_dataset/temporal_pipeline/placement_counter_v1/frozen_blind_run/hands_detector.pt",
+      "bytes": 5433285,
+      "sha256": "fb45ccf4c30b487aa78625664ae9b2f7134e03fc93385c7e4f179a6b327add36",
+      "included_in_model_archives": true
+    },
+    {
+      "path": "outputs/facility_dataset/temporal_pipeline/placement_counter_v2/carried_cheese_uncertainty_v2/run/weights/best.pt",
+      "bytes": 5432709,
+      "sha256": "b5303a08dd3731f536b7b594bfd133301a87061b09701a243d79a5339330c5f2",
+      "included_in_model_archives": true
+    },
+    {
+      "path": "outputs/facility_dataset/temporal_pipeline/placement_counter_v2/carried_cheese_uncertainty_v2/run/weights/last.pt",
+      "bytes": 5432709,
+      "sha256": "cdf8ab696ea6afe886dfcbf716ecc76124904ead0b97a7d8c45594852a89ff1e",
+      "included_in_model_archives": true
+    },
+    {
+      "path": "outputs/facility_dataset/temporal_pipeline/placement_counter_v2/carried_group_bootstrap/run/weights/best.pt",
+      "bytes": 5431237,
+      "sha256": "822a26fa9f97ceb15a640ae0d04fe5fbbc42ae3a8dbce6e1e7914f16787deec0",
+      "included_in_model_archives": true
+    },
+    {
+      "path": "outputs/facility_dataset/temporal_pipeline/placement_counter_v2/carried_group_bootstrap/run/weights/last.pt",
+      "bytes": 5431237,
+      "sha256": "fd3d748039ad40a3f7ca41935c4c3e895866dd817518d0dc95a9b1906b624219",
+      "included_in_model_archives": true
+    },
+    {
+      "path": "outputs/facility_dataset/temporal_pipeline/placement_counter_v2/individual_block_learning_diagnostic/run/weights/best.pt",
+      "bytes": 5435973,
+      "sha256": "19273fea6c2ce4099604166ad17ed08dea5805c81dd7b2a7419fdaf69636f36e",
+      "included_in_model_archives": true
+    },
+    {
+      "path": "outputs/facility_dataset/temporal_pipeline/placement_counter_v2/individual_block_learning_diagnostic/run/weights/last.pt",
+      "bytes": 5435973,
+      "sha256": "2bc1f275da554634109eff125e2c4975fc9bde93f85affccf49848f2332a3d3d",
+      "included_in_model_archives": true
+    },
+    {
+      "path": "outputs/facility_dataset/temporal_pipeline/placement_counter_v2/individual_blocks_expanded_v1/run/weights/best.pt",
+      "bytes": 5433093,
+      "sha256": "f50de0f24b0c577b384f50cbadbdd4bafb25e0fdf0f2ca865f1e51e827e48960",
+      "included_in_model_archives": true
+    },
+    {
+      "path": "outputs/facility_dataset/temporal_pipeline/placement_counter_v2/individual_blocks_expanded_v1/run/weights/last.pt",
+      "bytes": 5433093,
+      "sha256": "cd216f22652ac5b0a5d7b82410bba6f4315600790e2aec142c7bb0dc3aecf5af",
+      "included_in_model_archives": true
+    },
+    {
+      "path": "outputs/facility_dataset/temporal_pipeline/placement_counter_v2/segment_count_probe/experimental_count_head.pt",
+      "bytes": 6397,
+      "sha256": "98e4ee3b8db762415a1156cae2c2e3ded67ebee6429356107ec5cb052326a94e",
+      "included_in_model_archives": true
+    },
+    {
+      "path": "outputs/facility_dataset/temporal_pipeline/placement_counter_v3/native_temporal_diagnostic/experimental_native_temporal_counter.pt",
+      "bytes": 459505,
+      "sha256": "13042cdf3f44f1b478f4e0d3a2b39617bf7d2c74ba97af91712879a440e41e1e",
+      "included_in_model_archives": true
+    },
+    {
+      "path": "outputs/facility_dataset/temporal_pipeline/placement_counter_v3/native_temporal_diagnostic/fold_01.pt",
+      "bytes": 458227,
+      "sha256": "e167dfcc9dc588c3b25904e2d2cb4317e2c22cd67d87c2064d6891c1d9954306",
+      "included_in_model_archives": true
+    },
+    {
+      "path": "outputs/facility_dataset/temporal_pipeline/placement_counter_v3/native_temporal_diagnostic/fold_02.pt",
+      "bytes": 458227,
+      "sha256": "df7cf0f662def0dd7d31bbd9b88854822007f2f4f659c3b5b7db853d491f8266",
+      "included_in_model_archives": true
+    },
+    {
+      "path": "outputs/facility_dataset/temporal_pipeline/placement_counter_v3/native_temporal_diagnostic/fold_03.pt",
+      "bytes": 458227,
+      "sha256": "f4c184e0bf3f073204e4a57afd7f45d692cab88902a8f7b58994246a95fb9d79",
+      "included_in_model_archives": true
+    },
+    {
+      "path": "outputs/facility_dataset/temporal_pipeline/placement_counter_v3/native_temporal_diagnostic/fold_04.pt",
+      "bytes": 458227,
+      "sha256": "29d2bf675ff8208e267370d1278fa60ffb390af0db5150123f2ef5a534bc1266",
+      "included_in_model_archives": true
+    },
+    {
+      "path": "outputs/facility_dataset/temporal_pipeline/placement_counter_v3/native_temporal_diagnostic/fold_05.pt",
+      "bytes": 458227,
+      "sha256": "cc92cefcae68400b2a187772861e3e10779635fb464c260af9a3643cd69fac67",
+      "included_in_model_archives": true
+    },
+    {
+      "path": "outputs/facility_dataset/temporal_pipeline/placement_counter_v3/native_temporal_diagnostic/fold_06.pt",
+      "bytes": 458227,
+      "sha256": "634805f0b29c4815ffa9cd63b60a9cd9f3eb43768d98b30cc273a8b9b241662d",
+      "included_in_model_archives": true
+    },
+    {
+      "path": "outputs/facility_dataset/temporal_pipeline/placement_counter_v3/native_temporal_diagnostic/fold_07.pt",
+      "bytes": 458227,
+      "sha256": "40aa4deed7aa7a726c5711fe13246c14537cffc1358bd6ec85ea846585b4fc0d",
+      "included_in_model_archives": true
+    },
+    {
+      "path": "outputs/facility_dataset/temporal_pipeline/placement_counter_v3/native_temporal_diagnostic/fold_08.pt",
+      "bytes": 458227,
+      "sha256": "ac2308aab732daed43e8971a610dac72e71e56685a15214366df02d72b416d3d",
+      "included_in_model_archives": true
+    },
+    {
+      "path": "outputs/facility_dataset/temporal_pipeline/placement_counter_v3/native_temporal_diagnostic/fold_09.pt",
+      "bytes": 458227,
+      "sha256": "b47c104498bec1ca0d044a1c0471fa5439c590f288e8335e1ef09a9553e9bdad",
+      "included_in_model_archives": true
+    },
+    {
+      "path": "outputs/facility_dataset/temporal_pipeline/placement_counter_v3/native_temporal_diagnostic/fold_10.pt",
+      "bytes": 458227,
+      "sha256": "9d8fd3707a954357a891344276ba7ef40d631986dfdaaa42fe396a3b9f82df7f",
+      "included_in_model_archives": true
+    },
+    {
+      "path": "outputs/feta_training/hands_detector.pt",
+      "bytes": 5433285,
+      "sha256": "fb45ccf4c30b487aa78625664ae9b2f7134e03fc93385c7e4f179a6b327add36",
+      "included_in_model_archives": true
+    },
+    {
+      "path": "outputs/feta_training/runs/hands_v1/weights/best.pt",
+      "bytes": 5432517,
+      "sha256": "fc7d751824a85f2e8887b090faeda82110bfe64fedd0c9e2f06f629d2693d76b",
+      "included_in_model_archives": true
+    },
+    {
+      "path": "outputs/feta_training/runs/hands_v1/weights/last.pt",
+      "bytes": 5432517,
+      "sha256": "f8536488e7219a7cfb5e87b615cbab7a49604af06e8f1df9fe6d8f41bcc4375c",
+      "included_in_model_archives": true
+    },
+    {
+      "path": "outputs/feta_training/runs/hands_v2/weights/best.pt",
+      "bytes": 5433285,
+      "sha256": "fb45ccf4c30b487aa78625664ae9b2f7134e03fc93385c7e4f179a6b327add36",
+      "included_in_model_archives": true
+    },
+    {
+      "path": "outputs/feta_training/runs/hands_v2/weights/last.pt",
+      "bytes": 5433285,
+      "sha256": "f7f1bf4d4672efd8dfb2b8c70897a4f3f2b38bd6d8ddae4e4ae7929f00b4b664",
+      "included_in_model_archives": true
+    },
+    {
+      "path": "outputs/feta_training/yolo26n.pt",
+      "bytes": 5544453,
+      "sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+      "included_in_model_archives": true
+    }
+  ],
+  "important_versions": [
+    {
+      "path": "outputs/feta_training/hands_detector.pt",
+      "role": "Historic hand/glove detector, not a cheese quantity counter"
+    },
+    {
+      "path": "outputs/feta_training/yolo26n.pt",
+      "role": "Generic pretrained image backbone used frozen in v3"
+    },
+    {
+      "path": "outputs/facility_dataset/temporal_pipeline/placement_counter_v2/carried_cheese_uncertainty_v2/run/weights/last.pt",
+      "role": "Single-block/unknown-quantity detector; complete reliable trajectories not established"
+    },
+    {
+      "path": "outputs/facility_dataset/temporal_pipeline/placement_counter_v3/native_temporal_diagnostic/experimental_native_temporal_counter.pt",
+      "role": "Failed all-source fitted count-rate baseline; not a held-out evaluation checkpoint"
+    },
+    {
+      "path": "outputs/facility_dataset/temporal_pipeline/placement_counter_v3/native_temporal_diagnostic/fold_*.pt",
+      "role": "Ten source-excluded heads used for reported development predictions"
+    }
+  ],
+  "required_v3_companions": [
+    "outputs/feta_training/yolo26n.pt",
+    "outputs/facility_dataset/temporal_pipeline/placement_counter_v3/native_temporal_diagnostic/fixed_projection.npy"
+  ],
+  "downloadable_base_model": {
+    "model_id": "IDEA-Research/grounding-dino-tiny",
+    "local_path": "work/models/grounding-dino-tiny/model.safetensors",
+    "mirrored_to_github": false,
+    "restore_script": "work/download_grounding_dino.py"
+  },
+  "cloud_only_checkpoint_locations": "REMOTE_ARTIFACTS.json"
+}

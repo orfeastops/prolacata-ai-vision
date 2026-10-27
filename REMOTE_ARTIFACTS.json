@@ -1,0 +1,41 @@
+{
+  "snapshot_date": "2026-10-27",
+  "status_basis": "Previously recorded local observations; not a fresh remote-state audit",
+  "private_datasets": [
+    "https://www.kaggle.com/datasets/orfeastops/facility-production-camera-11-and-15-october-2026",
+    "https://www.kaggle.com/datasets/orfeastops/facility-camera11-unseen-test-september-26-2026"
+  ],
+  "runs": [
+    {
+      "stage": "GPU proposal preparation",
+      "url": "https://www.kaggle.com/code/orfeastops/facility-production-full-data-gpu-preparation?scriptVersionId=361281589",
+      "local_checkpoint_mirror_complete": false
+    },
+    {
+      "stage": "Proposal export",
+      "url": "https://www.kaggle.com/code/orfeastops/facility-proposal-export-for-annotation-review?scriptVersionId=361368113",
+      "local_checkpoint_mirror_complete": false
+    },
+    {
+      "stage": "VideoMAE pretraining",
+      "url": "https://www.kaggle.com/code/orfeastops/facility-temporal-video-pretraining-full-sources?scriptVersionId=361412417",
+      "local_checkpoint_mirror_complete": false
+    },
+    {
+      "stage": "Reviewed action pilot",
+      "url": "https://www.kaggle.com/code/orfeastops/facility-reviewed-hand-action-training?scriptVersionId=361524639",
+      "local_checkpoint_mirror_complete": false
+    },
+    {
+      "stage": "Pretrained action comparison",
+      "url": "https://www.kaggle.com/code/orfeastops/facility-reviewed-hand-action-training?scriptVersionId=361529122",
+      "local_checkpoint_mirror_complete": false
+    },
+    {
+      "stage": "September action-window inference",
+      "url": "https://www.kaggle.com/code/orfeastops/facility-camera11-unseen-september26-test?scriptVersionId=361560877",
+      "local_checkpoint_mirror_complete": false
+    }
+  ],
+  "note": "Numerical results and notebook sources are archived. Cloud-only checkpoint outputs require the corresponding Kaggle account/run; do not claim these are all mirrored to GitHub."
+}

@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+.env.*
+work/facility_media/
+work/unseen_test_20260926/
+work/feta_env/
+outputs/
