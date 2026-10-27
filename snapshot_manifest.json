@@ -2,12 +2,12 @@
   "schema_version": 1,
   "project": "orfeastops/prolacata-ai-vision",
   "snapshot_date": "2026-10-27",
-  "original_scripts": 92,
+  "original_scripts": 93,
   "archives": [
     {
       "file": "snapshot-data.zip",
-      "sha256": "24003c25184f4a5a6878afe12b367e47b03c7ae17962cd7d0fce2733afe7e652",
-      "bytes": 13793280,
+      "sha256": "228ccab030851e3d8fbb8d65e63c713cca4e27a2cb5082dfef207673c632e8e0",
+      "bytes": 13798498,
       "members": {
         "outputs/camera_inventory.json": "6c70cf4e644ae5fcf1a9f770d57718dce1c44577847322d3bf9f1a71df8d4b86",
         "outputs/facility_dataset/annotation_audit/action_review/clip_manifest.json": "62d71a9ffef91aa76d4bb6182a3777f3f387677d0b072dd7981ae0561e5099a0",
@@ -5989,7 +5989,9 @@
         "outputs/facility_dataset/temporal_pipeline/sequence_annotation_v4/C05/annotation.json": "e0a8c92b0d9e00924b976e9307ba2ef82767d35c543b702a081f45beb1a2f6a4",
         "outputs/facility_dataset/temporal_pipeline/sequence_annotation_v4/C06/annotation.json": "46f55bfdb52cf8d647be9ead9d7fc42e6958e2a42272881245a095607cff3e74",
         "outputs/facility_dataset/temporal_pipeline/sequence_annotation_v4/candidate_sources.json": "1e20487f1197c6cfbf46f1eccf6416a036525586800d6c8fef9a3527020ea83a",
-        "outputs/facility_dataset/temporal_pipeline/sequence_annotation_v4/expert_feedback/C01_expert_review_EN.json": "add96aa849ea635223ba627561c583a617b042ce0ec0d7d4612dafd0ed7652d7",
+        "outputs/facility_dataset/temporal_pipeline/sequence_annotation_v4/expert_feedback/C01_boundary_chat_confirmation_20261027.json": "f513ac6415d3fc886722825b9787104bb762cdb5675915129c79308cfacdf1ab",
+        "outputs/facility_dataset/temporal_pipeline/sequence_annotation_v4/expert_feedback/C01_expert_review_before_boundary_EN.json": "add96aa849ea635223ba627561c583a617b042ce0ec0d7d4612dafd0ed7652d7",
+        "outputs/facility_dataset/temporal_pipeline/sequence_annotation_v4/expert_feedback/C01_expert_review_EN.json": "68683ed81cb3eda40be964d7d934a0b0dfbb29ef3a630cd160ebf22076a3ee12",
         "outputs/facility_dataset/temporal_pipeline/sequence_annotation_v4/expert_feedback/C01_form_export_20261027.json": "a4548d0e38fde63c7b27a975744e49182f12924298594eebb9660fb77186ebb1",
         "outputs/facility_dataset/temporal_pipeline/sequence_annotation_v4/local_review_verification.json": "dcc5f0ecc5867d66ad1a5536e0f4c74088054549c0984db43d1ce73b8a3ece43",
         "outputs/facility_dataset/temporal_pipeline/sequence_annotation_v4/manifest.json": "d831aaff0d6a098cba088ef3ad521b7713d014837effc80ca67f78605a94cb25",
@@ -6296,16 +6298,17 @@
         "work/prepare_two_tank_timeline.py": "63e20d8b4e8f6bc00d1b0232dfee6a470da4793498d9352dde063fbde8664bdc",
         "work/prepare_unseen_camera_test.py": "983d88e0f514890be2775dfc4c06ac4744cbe18a8845472d7121d7ea650c15d7",
         "work/project_handoff/ANNOTATION_PROTOCOL.md": "a58ce61411b168d0fcb36f4947ebef1a22551c4583505185f1dcb253c2319736",
-        "work/project_handoff/CURRENT_STATE.json": "eecb38633d5442f4992c0770c7200356e260e36ed65c76a3ca0eca6b8d0115ce",
+        "work/project_handoff/CURRENT_STATE.json": "f03e7202870c4c117ee8e4e898578b8e1f043f6fb325be5129167e0e014f17f0",
         "work/project_handoff/DATA_AND_REPRODUCIBILITY.md": "e3b584ae34a0a02557def9d4f12e594e4c344f9d2612003fb9b546cb6d2befa5",
-        "work/project_handoff/EXPERIMENT_HISTORY.md": "116d7869d73fa760e5291bf681a767f546f6fcdc80b4885342a413ea879930a2",
-        "work/project_handoff/EXPERT_FEEDBACK_C01.json": "add96aa849ea635223ba627561c583a617b042ce0ec0d7d4612dafd0ed7652d7",
+        "work/project_handoff/EXPERIMENT_HISTORY.md": "2a9b43ede333dca2ea9dc96fd36ca3d6b502f4436eea52d75834b691cea51f67",
+        "work/project_handoff/EXPERT_FEEDBACK_C01.json": "68683ed81cb3eda40be964d7d934a0b0dfbb29ef3a630cd160ebf22076a3ee12",
         "work/project_handoff/MODEL_REGISTRY.json": "536147dc9db11300cbed94612ef3bdfbdd6b37451bc5c87b3b9fdca1ce4a3f34",
         "work/project_handoff/README.md": "291b5aeff83339cd8dc3823f51f4c525beaded319c6b0630f7788ed41bd53f2c",
         "work/project_handoff/REMOTE_ARTIFACTS.json": "2a2f40cc96d743d6499f7453c37d1bcfcc2199c6118208518cd727491861aeb5",
-        "work/project_handoff/START_HERE.md": "420b11336f3fbcba23110dc7dece7056152cc3bbeabef157e100b9cfca642673",
+        "work/project_handoff/START_HERE.md": "bca866d99e572f7965af6cb6809c91bca1c575c6ced6430212b0b6f80e8bbbd4",
         "work/propose_glove_boxes.py": "53feb51c5367e1b7b0b02267e5e54f4a2d62d3425b63ad9dbede7fdcb0e36e12",
         "work/read_partial_proposal_zip.py": "60edfe12078cba830f056a82405e944ec38c3a7f86b1b3ef94f9f974b906b5a2",
+        "work/record_c01_boundary_feedback.py": "27288977c6c9647c82faa8bfa46f7916cb0c1d184e9e79349aa569333ad7e9e6",
         "work/record_c01_expert_feedback.py": "1d8dbb40d70c8cb4bc753a9ac95a98d29bb63de9c1f1012e35697988f80bcc86",
         "work/record_first_temporal_review.py": "d01a66c51e49627411dd1212e8bc02c1a158e9d2b66fea77215593b93926d2a2",
         "work/record_no_lift_feedback.py": "45e1db4ad9b6a67c0871efca6884c3681155890a85bb4e3f871ac841b045b05b",
@@ -7412,7 +7415,7 @@
     },
     {
       "file": "snapshot-models-01.zip",
-      "sha256": "a4717c9d99fc4b797f5b75fe1936e483a0aec650f021d53f37b9f40f9cc9d153",
+      "sha256": "c7099887ed9571661ce546a06ca5e8b68d6742fbbab44a868c7cad5ca009743c",
       "bytes": 14554182,
       "members": {
         "outputs/facility_dataset/temporal_pipeline/placement_counter_v1/frozen_blind_run/hands_detector.pt": "fb45ccf4c30b487aa78625664ae9b2f7134e03fc93385c7e4f179a6b327add36",
@@ -7422,7 +7425,7 @@
     },
     {
       "file": "snapshot-models-02.zip",
-      "sha256": "b417ba952c16b5a25360b6e4a7a74144a54633abf4680d6a127c8751b5aad7c2",
+      "sha256": "a87020db8454002a179f38703329ab3d42ca106245693cf94be925ff58e7be9c",
       "bytes": 14573637,
       "members": {
         "outputs/facility_dataset/temporal_pipeline/placement_counter_v2/carried_group_bootstrap/run/weights/best.pt": "822a26fa9f97ceb15a640ae0d04fe5fbbc42ae3a8dbce6e1e7914f16787deec0",
@@ -7432,7 +7435,7 @@
     },
     {
       "file": "snapshot-models-03.zip",
-      "sha256": "5d76ec3857c8b6648a334fcff9c7920de8593370075aec50735845313efd371e",
+      "sha256": "5d7edb8ba4797afe41e288664c283bff2ae18a60b731a7b0ede6d6ac550ef119",
       "bytes": 14963536,
       "members": {
         "outputs/facility_dataset/temporal_pipeline/placement_counter_v2/individual_block_learning_diagnostic/run/weights/last.pt": "2bc1f275da554634109eff125e2c4975fc9bde93f85affccf49848f2332a3d3d",
@@ -7444,7 +7447,7 @@
     },
     {
       "file": "snapshot-models-04.zip",
-      "sha256": "ac74251f2a44dc36a8e2a84dbfcfb16899b0c1c192867d0ba4fb9a1dad70b86c",
+      "sha256": "69bd22def30b8fa556b6d874a634b8bb6dd3681929de3a9601060650938d5175",
       "bytes": 12458673,
       "members": {
         "outputs/facility_dataset/temporal_pipeline/placement_counter_v3/native_temporal_diagnostic/fixed_projection.npy": "9d60e75ccd6abc74e8a96868c14c47a7dad9e7762cbb2856208c34f5b1fadec8",
@@ -7463,7 +7466,7 @@
     },
     {
       "file": "snapshot-models-05.zip",
-      "sha256": "80314438cef99013c83ccc3f05e3d5750b76d93665b14afa18f480c3df0f0d23",
+      "sha256": "91b99fe4855c0811b19716ab2bd721375eab275635d08def82646859578bc3f0",
       "bytes": 14591394,
       "members": {
         "outputs/feta_training/runs/hands_v1/weights/best.pt": "fc7d751824a85f2e8887b090faeda82110bfe64fedd0c9e2f06f629d2693d76b",
@@ -7473,7 +7476,7 @@
     },
     {
       "file": "snapshot-models-06.zip",
-      "sha256": "b78a36bae9255fbb915c3db8c96e820c2c9fa6667af7c4254e6778a82a33e404",
+      "sha256": "cf89e8aa58e2419bf1b752565e71c891b3ccc00bb758708947b9b8e51a5481c6",
       "bytes": 9819038,
       "members": {
         "outputs/feta_training/runs/hands_v2/weights/last.pt": "f7f1bf4d4672efd8dfb2b8c70897a4f3f2b38bd6d8ddae4e4ae7929f00b4b664",
@@ -7548,6 +7551,7 @@
     "work/prepare_unseen_camera_test.py": "d51c65a007f99db22e6684ba57647dc391255ca6d068743c2233402be8f1f5d5",
     "work/propose_glove_boxes.py": "0c7935729d6d95247569a95fafe674dd604f25ec40d1cb5db605565f2efd1a0d",
     "work/read_partial_proposal_zip.py": "313f82256c31448e508e82ffbe36446d15545cf57f07850d3e3d19206c95ab79",
+    "work/record_c01_boundary_feedback.py": "19962bfdd37f55f1d68638b759a71dd8052687504e13c756a871a2e2a66d80b0",
     "work/record_c01_expert_feedback.py": "d3f9cf695d5a46375361c477029b32e4b1de36ab036204aaa9967eda0dc4583f",
     "work/record_first_temporal_review.py": "568f6646f739af6caaf2f16b7a65faf6acc9ba28dceba6238944c9b955249375",
     "work/record_no_lift_feedback.py": "5ed160ca913a54a97689a82de54db0fe5ea749b60c0756327d2cec2fb80d5058",

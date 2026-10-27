@@ -83,20 +83,34 @@
       "quantity_basis": "Reviewer quantity field",
       "expert_quantity_confirmed": true,
       "destination": "filling_tank",
-      "english_note": "Releases two, but the video cuts off. Completion relative to the clip boundary needs clarification.",
+      "english_note": "Transfer begins at 28.20. At 30.00 the carrier reaches above the tank and begins releasing. The first block is released at 30.74 and the second at 33.30.",
       "original_entry_index": 3,
       "original_submission_file": "C01_form_export_20261027.json",
-      "lift_time_s": 28.28,
-      "release_time_s": 29.96,
-      "carry_duration_s": 1.68,
-      "nearest_lift_frame": 423,
-      "nearest_release_frame": 448,
-      "nearest_lift_time_s": 28.28,
-      "nearest_release_time_s": 29.96,
+      "lift_time_s": 28.2,
+      "release_time_s": 33.3,
+      "carry_duration_s": 5.1,
+      "nearest_lift_frame": null,
+      "nearest_release_frame": null,
+      "nearest_lift_time_s": null,
+      "nearest_release_time_s": null,
       "reviewer_timing_is_exact_release_frame_verified": false,
-      "complete_release_boundary_uncertain": true,
+      "complete_release_boundary_uncertain": false,
       "note_type": "reviewer_reported_transfer",
-      "actual_object_boxes_and_tracks_verified": false
+      "actual_object_boxes_and_tracks_verified": false,
+      "release_events": [
+        {
+          "time_s": 30.74,
+          "quantity": 1
+        },
+        {
+          "time_s": 33.3,
+          "quantity": 1
+        }
+      ],
+      "release_is_outside_original_clip": true,
+      "original_clip_deposited_quantity": 0,
+      "extended_context_deposited_quantity": 2,
+      "timing_superseded_by": "C01_boundary_chat_confirmation_20261027.json"
     },
     {
       "event_id": "C01_U05",
@@ -242,17 +256,20 @@
     "unambiguous_completed_transfer_rows": 8,
     "blocks_in_those_rows": 18,
     "three_block_transfer_rows": 3,
-    "boundary_uncertain_transfer_rows": 1,
-    "boundary_uncertain_quantity": 2,
+    "boundary_uncertain_transfer_rows": 0,
+    "boundary_uncertain_quantity": 0,
     "no_new_block_observations": 1,
-    "whole_clip_total_confirmed": null
+    "whole_clip_total_confirmed": null,
+    "context_resolved_transfer_rows": 1,
+    "blocks_released_after_original_clip": 2,
+    "annotated_blocks_released_within_original_clip": 18
   },
   "requires_context_check": [
-    "The final two-block left-side release is at the last frame and described as cut off.",
-    "No exhaustive negative labels are inferred from gaps between entries."
+    "No exhaustive negative labels or independent whole-clip total are inferred from gaps between entries."
   ],
   "training_on_this_submission_started": false,
   "exhaustive_coverage_confirmed": false,
   "physical_object_annotations_complete": false,
-  "important_semantic_correction": "A valid drop into the tank can occur from above without deep bending. Bending is not mandatory count evidence."
+  "important_semantic_correction": "A valid drop into the tank can occur from above without deep bending. Bending is not mandatory count evidence.",
+  "boundary_feedback_file": "C01_boundary_chat_confirmation_20261027.json"
 }

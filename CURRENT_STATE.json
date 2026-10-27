@@ -12,7 +12,7 @@
     2,
     5
   ],
-  "next_task": "Resolve C01 final release boundary; collect C02-C06 feedback; link expert transfers to visible object/group annotations before new training",
+  "next_task": "Collect C02-C06 feedback; link expert transfers to visible object/group annotations before new training. C01 final two releases are at 30.74 and 33.30, outside its original clip.",
   "annotation_batch": [
     {
       "clip_id": "C01",
@@ -67,9 +67,13 @@
     "unambiguous_completed_transfer_rows": 8,
     "blocks_in_those_rows": 18,
     "three_block_transfer_rows": 3,
-    "boundary_uncertain_transfer_rows": 1,
-    "boundary_uncertain_quantity": 2,
+    "boundary_uncertain_transfer_rows": 0,
+    "boundary_uncertain_quantity": 0,
     "no_new_block_observations": 1,
-    "whole_clip_total_confirmed": null
-  }
+    "whole_clip_total_confirmed": null,
+    "context_resolved_transfer_rows": 1,
+    "blocks_released_after_original_clip": 2,
+    "annotated_blocks_released_within_original_clip": 18
+  },
+  "C01_boundary_resolved": true
 }
