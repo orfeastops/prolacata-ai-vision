@@ -2,7 +2,7 @@
 
 ## Restore the local project snapshot
 
-The complete project/checkpoint bundle is distributed as the release asset `prolacata-research-snapshot-2026-10-27.zip`. Extract it first. Source code and handoff documents are also browsable in Git, but `snapshot-data.zip` and the six model archives are release assets inside that bundle. A plain Git clone requires these additional archives before restoration.
+Source code and English handoff documents are browsable in Git. `snapshot-data.zip` and the six `snapshot-models-*.zip` files are separate assets on the `v0.0.0-research-20261027` release. After cloning or extracting the repository source ZIP, run `python download_snapshot.py` to download those seven archives and verify their SHA-256 hashes. Alternatively, download all seven release archives manually into the repository root. The download helper requires only Python's standard library and does not require a GitHub token for this public repository.
 
 Run `python restore_snapshot.py --verify-only`, then `python restore_snapshot.py` from the repository root. Every archive and extracted member is checked against `snapshot_manifest.json`. Extraction is constrained to the checkout. Existing files with different bytes are protected unless `--overwrite` is explicitly supplied.
 

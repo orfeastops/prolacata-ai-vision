@@ -6,8 +6,8 @@
   "archives": [
     {
       "file": "snapshot-data.zip",
-      "sha256": "228ccab030851e3d8fbb8d65e63c713cca4e27a2cb5082dfef207673c632e8e0",
-      "bytes": 13798498,
+      "sha256": "f48ff576218d8c48d0837082e3ab38eb5e52ce32fae305dddeffa2fc07da1fab",
+      "bytes": 13799662,
       "members": {
         "outputs/camera_inventory.json": "6c70cf4e644ae5fcf1a9f770d57718dce1c44577847322d3bf9f1a71df8d4b86",
         "outputs/facility_dataset/annotation_audit/action_review/clip_manifest.json": "62d71a9ffef91aa76d4bb6182a3777f3f387677d0b072dd7981ae0561e5099a0",
@@ -6290,7 +6290,7 @@
         "work/prepare_complete_transfer_review.py": "3a5a2245a72938fa4c6e3c74e94a1e62122ad4165c5b9035aa7ca1fc4e10759e",
         "work/prepare_extra_training.py": "2ebb22307f773a90a7c43726d5be55f93fc2f70d70ce9182a2e246c147aa1bd2",
         "work/prepare_first_action_review.py": "3208b7bd0c42124123b525a578aff26efb5fdc864114d7492a45f8355b04e2e4",
-        "work/prepare_github_snapshot.py": "5ee872414c1a2aa79319d712b8283000a3e80b5735722dcfd2e1398c9b323ec2",
+        "work/prepare_github_snapshot.py": "43629b4b11f8ce951ecbdfdbf9403c7bdf88ee3e423d937c5a26aa44283eaa24",
         "work/prepare_individual_block_review.py": "136fa7f5150c18647b77ef78c601dc9da9864cdfbe2b9f965672f65030a840b4",
         "work/prepare_multiday_action_batch.py": "8f6003010350a43e00dfc1b6eabaeb3e73c96ccd9de98602f6be047508edccbd",
         "work/prepare_timed_expert_batch_v4.py": "8bb5081ddd0ba861522fe7767a339f7a74b24124b112c59a257ba6fcb620856c",
@@ -6299,11 +6299,12 @@
         "work/prepare_unseen_camera_test.py": "983d88e0f514890be2775dfc4c06ac4744cbe18a8845472d7121d7ea650c15d7",
         "work/project_handoff/ANNOTATION_PROTOCOL.md": "a58ce61411b168d0fcb36f4947ebef1a22551c4583505185f1dcb253c2319736",
         "work/project_handoff/CURRENT_STATE.json": "f03e7202870c4c117ee8e4e898578b8e1f043f6fb325be5129167e0e014f17f0",
-        "work/project_handoff/DATA_AND_REPRODUCIBILITY.md": "e3b584ae34a0a02557def9d4f12e594e4c344f9d2612003fb9b546cb6d2befa5",
+        "work/project_handoff/DATA_AND_REPRODUCIBILITY.md": "f7a55538b4e43f1396650c48a583553e6275558e6e57be38230478493447b7eb",
+        "work/project_handoff/download_snapshot.py": "6b109d2aa9a61bea7ad4709245fc7354dbf36872a180d31dce805fd4d704d924",
         "work/project_handoff/EXPERIMENT_HISTORY.md": "2a9b43ede333dca2ea9dc96fd36ca3d6b502f4436eea52d75834b691cea51f67",
         "work/project_handoff/EXPERT_FEEDBACK_C01.json": "68683ed81cb3eda40be964d7d934a0b0dfbb29ef3a630cd160ebf22076a3ee12",
         "work/project_handoff/MODEL_REGISTRY.json": "536147dc9db11300cbed94612ef3bdfbdd6b37451bc5c87b3b9fdca1ce4a3f34",
-        "work/project_handoff/README.md": "291b5aeff83339cd8dc3823f51f4c525beaded319c6b0630f7788ed41bd53f2c",
+        "work/project_handoff/README.md": "0da7a974f2b5d51b1e4d31a01358f1b4ffe737622c02434cb51fae949e1de208",
         "work/project_handoff/REMOTE_ARTIFACTS.json": "2a2f40cc96d743d6499f7453c37d1bcfcc2199c6118208518cd727491861aeb5",
         "work/project_handoff/START_HERE.md": "bca866d99e572f7965af6cb6809c91bca1c575c6ced6430212b0b6f80e8bbbd4",
         "work/propose_glove_boxes.py": "53feb51c5367e1b7b0b02267e5e54f4a2d62d3425b63ad9dbede7fdcb0e36e12",
@@ -7415,7 +7416,7 @@
     },
     {
       "file": "snapshot-models-01.zip",
-      "sha256": "c7099887ed9571661ce546a06ca5e8b68d6742fbbab44a868c7cad5ca009743c",
+      "sha256": "a40fe86ee19f210cadc34fee3f38e76758b24f483df9f1e7a04aa34436503cd3",
       "bytes": 14554182,
       "members": {
         "outputs/facility_dataset/temporal_pipeline/placement_counter_v1/frozen_blind_run/hands_detector.pt": "fb45ccf4c30b487aa78625664ae9b2f7134e03fc93385c7e4f179a6b327add36",
@@ -7425,7 +7426,7 @@
     },
     {
       "file": "snapshot-models-02.zip",
-      "sha256": "a87020db8454002a179f38703329ab3d42ca106245693cf94be925ff58e7be9c",
+      "sha256": "6b4d6ff321722b3268bef0fd8bdb2e64f06f5537d1a21e136b8e20f2ce283c2c",
       "bytes": 14573637,
       "members": {
         "outputs/facility_dataset/temporal_pipeline/placement_counter_v2/carried_group_bootstrap/run/weights/best.pt": "822a26fa9f97ceb15a640ae0d04fe5fbbc42ae3a8dbce6e1e7914f16787deec0",
@@ -7435,7 +7436,7 @@
     },
     {
       "file": "snapshot-models-03.zip",
-      "sha256": "5d7edb8ba4797afe41e288664c283bff2ae18a60b731a7b0ede6d6ac550ef119",
+      "sha256": "d9a33ff0ea455cb09d33e1f0afd4d1642191cad4802fd148b9b9aca323fc9875",
       "bytes": 14963536,
       "members": {
         "outputs/facility_dataset/temporal_pipeline/placement_counter_v2/individual_block_learning_diagnostic/run/weights/last.pt": "2bc1f275da554634109eff125e2c4975fc9bde93f85affccf49848f2332a3d3d",
@@ -7447,7 +7448,7 @@
     },
     {
       "file": "snapshot-models-04.zip",
-      "sha256": "69bd22def30b8fa556b6d874a634b8bb6dd3681929de3a9601060650938d5175",
+      "sha256": "03097c8bca07ff6cc343469e7e8a814ba37efbfc33b4646eb9306a90f3515bf7",
       "bytes": 12458673,
       "members": {
         "outputs/facility_dataset/temporal_pipeline/placement_counter_v3/native_temporal_diagnostic/fixed_projection.npy": "9d60e75ccd6abc74e8a96868c14c47a7dad9e7762cbb2856208c34f5b1fadec8",
@@ -7466,7 +7467,7 @@
     },
     {
       "file": "snapshot-models-05.zip",
-      "sha256": "91b99fe4855c0811b19716ab2bd721375eab275635d08def82646859578bc3f0",
+      "sha256": "729a21eb3588fbc22ab88a1474b00db4ee0e390c110f1778cda2ca0ae2d5a41b",
       "bytes": 14591394,
       "members": {
         "outputs/feta_training/runs/hands_v1/weights/best.pt": "fc7d751824a85f2e8887b090faeda82110bfe64fedd0c9e2f06f629d2693d76b",
@@ -7476,7 +7477,7 @@
     },
     {
       "file": "snapshot-models-06.zip",
-      "sha256": "cf89e8aa58e2419bf1b752565e71c891b3ccc00bb758708947b9b8e51a5481c6",
+      "sha256": "f5d67c60f2e1c8a8a37a276f577f4821c186b07efaeb3d333873cd087b8f04b4",
       "bytes": 9819038,
       "members": {
         "outputs/feta_training/runs/hands_v2/weights/last.pt": "f7f1bf4d4672efd8dfb2b8c70897a4f3f2b38bd6d8ddae4e4ae7929f00b4b664",
@@ -7542,7 +7543,7 @@
     "work/prepare_complete_transfer_review.py": "8e6ec702c7e333552a704eb663a3e7f80bc468d6a0b8f6e35c8e7bb74186f8f2",
     "work/prepare_extra_training.py": "e3b6ff17240d4d4a14698fd76b67c7d8a408b1a6b4679484107320296e4b74e4",
     "work/prepare_first_action_review.py": "70805fb5bac0fcf0733d54ac79c27c5f950fc833a66f8921221b13150c623c6b",
-    "work/prepare_github_snapshot.py": "4c2496ca34d72b04aa68be6ca15351efdda79143ab6d54d076d46603cceee6dd",
+    "work/prepare_github_snapshot.py": "6882276269162d1288110c83de8ac3bfbc152c824bdff9b523b5c14b6de90d42",
     "work/prepare_individual_block_review.py": "0c5d058deca82b2cb87c124ed24cf64f49e01773e3aefa622c3d44624bcf1ff1",
     "work/prepare_multiday_action_batch.py": "cb089edf7583ed9913256832e5d5366bb53bdbbe4abd79dc5a04abc1bd34c667",
     "work/prepare_timed_expert_batch_v4.py": "fa80d6034daeb429c5fa0c66c7b2af27f97723acad4026984b448754da253d29",

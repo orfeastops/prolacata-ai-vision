@@ -21,11 +21,12 @@ Camera videos, employee images, large image caches and Python environments are n
 
 ## Restore
 
-Download `prolacata-research-snapshot-2026-10-27.zip` from the repository's **Releases** page and extract it into a new folder. It includes the source code, English handoff, manifest, restoration helper, and all seven artifact archives. The normal GitHub source ZIP or a Git clone alone does not include the checkpoint/data archives. If using a clone, copy the seven `snapshot-*.zip` archives from the release bundle into its root.
+Clone this repository or download its source ZIP. The seven `snapshot-*.zip` archives are separate assets on the **[research release](https://github.com/orfeastops/prolacata-ai-vision/releases/tag/v0.0.0-research-20261027)**. Run `python download_snapshot.py` to retrieve them automatically and verify every SHA-256 checksum. Alternatively, download all seven archives manually into the checkout root. A Git clone alone does not include those checkpoint/data archives.
 
 From the repository root:
 
 ```powershell
+python download_snapshot.py
 python restore_snapshot.py --verify-only
 python restore_snapshot.py
 python -m venv .venv
