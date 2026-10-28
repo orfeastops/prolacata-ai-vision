@@ -90,3 +90,9 @@ The next work is richer object/transfer supervision and source-held-out validati
 ## 10. First v4 expert response
 
 The user completed the C01 form with ten entries. Three left-side transfers contain three blocks each. Another valid right-side transfer drops two blocks from above without deep bending. One blank quantity field was explicitly resolved as two from the reviewer note, and one no-new-block adjustment was retained as a zero increment. Eight completed rows describe 18 blocks within the original clip. A final two-block row initially appeared unresolved at its boundary. After reviewing an extended native-frame context clip, the user confirmed transfer start at 28.20, arrival above the tank around 30.00, and individual releases at 30.74 and 33.30 seconds. Both releases are after the original 29.96-second last frame. Preserve the carry across clip boundaries and do not count those two early. No new model training has started from these labels. See EXPERT_FEEDBACK_C01.json, the preserved original form export, and C01_boundary_chat_confirmation_20261027.json.
+
+
+## Latest model experiment: 28 October 2026
+
+Read [EVENT_TRAINING_RESULT_20261028.md](EVENT_TRAINING_RESULT_20261028.md) before the annotation-only update below. A real training run now used C01 and assistant C03-C06 (50 release entries, 25 negative intervals). C02 and all ten sources of the historical benchmark remained excluded. The source-check count MAE was 5.083, with 2/7 positive clips exact and false counts in 1/5 negative clips. The research screen failed. No live camera connection occurred. The checkpoint, scripts and frozen predictions are preserved in `event-training-update-20261028.zip`.
+

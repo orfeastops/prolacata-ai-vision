@@ -2,17 +2,17 @@
   "snapshot_date": "2026-10-27",
   "production_ready": false,
   "live_cameras_connected": false,
-  "latest_completed_experiment": "placement_counter_v3/native_temporal_diagnostic",
-  "latest_source_held_out_mae": 2.364043176174164,
+  "latest_completed_experiment": "placement_counter_v4/event_quantity_diagnostic",
+  "latest_source_held_out_mae": 5.083333333333333,
   "latest_positive_exact": [
-    1,
+    2,
     7
   ],
   "latest_zero_false_positive": [
-    2,
+    1,
     5
   ],
-  "next_task": "Read the October 28 visual annotation update; use expert C01/C02 anchors and assistant C03-C06 proposals with uncertainty masks for richer object/temporal supervision. Preserve source-grouped evaluation and demonstrate held-out count improvements before live deployment.",
+  "next_task": "Read EVENT_TRAINING_RESULT_20261028.md and inspect the frozen model outputs. Improve carried-object evidence and representation using development sources; preserve C02 and historical source-check provenance. Do not tune on September 26 or October 3, report training fit as production accuracy, or reconnect cameras.",
   "annotation_batch": [
     {
       "clip_id": "C01",
@@ -61,7 +61,7 @@
       "assistant_annotation_file": "ASSISTANT_VISUAL_ANNOTATIONS_V4.json"
     }
   ],
-  "no_active_training_job_started_for_v4": true,
+  "no_active_training_job_started_for_v4": false,
   "no_ground_truth_inferred_from_missing_review_entries": true,
   "september_excluded_from_training": true,
   "september_previously_inspected_for_error_analysis": true,
@@ -108,5 +108,45 @@
     "model_accuracy": null,
     "file": "ASSISTANT_VISUAL_ANNOTATIONS_V4.json"
   },
-  "C02_boundary_assistant_supplement": "outputs/facility_dataset/temporal_pipeline/sequence_annotation_v4/assistant_visual_review/C02_boundary_supplement.json"
+  "C02_boundary_assistant_supplement": "outputs/facility_dataset/temporal_pipeline/sequence_annotation_v4/assistant_visual_review/C02_boundary_supplement.json",
+  "latest_training_update": "2026-10-28",
+  "v4_training_status": "complete",
+  "historical_v3_metrics": {
+    "source_held_out_mae": 2.364043176174164,
+    "positive_exact": [
+      1,
+      7
+    ],
+    "zero_false_positive": [
+      2,
+      5
+    ]
+  },
+  "metric_comparability": "Different training sources, supervision, head and discrete decoding; not a controlled architecture-only or fps comparison.",
+  "v4_event_quantity_experiment": {
+    "metrics": {
+      "clips": 12,
+      "source_files": 10,
+      "mean_absolute_count_error": 5.083333333333333,
+      "positive_clips": 7,
+      "positive_exact": 2,
+      "negative_clips": 5,
+      "negative_false_counts": 1,
+      "screen_passed": false
+    },
+    "train_clips": [
+      "C01",
+      "C03",
+      "C04",
+      "C05",
+      "C06"
+    ],
+    "excluded_new_source": "C02",
+    "training_release_entries": 50,
+    "training_negative_intervals": 25,
+    "checkpoint_sha256": "a50aa3e44cab4f22d7c9852c6cfc6f412d1838ab5eba4d91d0a52d348cbc38b8",
+    "result_file": "EVENT_TRAINING_RESULT_20261028.json",
+    "trained_object_detector": false,
+    "trained_temporal_event_quantity_heads": true
+  }
 }

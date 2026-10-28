@@ -1,5 +1,9 @@
 # Prolacata AI Vision
 
+## Latest model experiment: 28 October 2026
+
+Read [EVENT_TRAINING_RESULT_20261028.md](EVENT_TRAINING_RESULT_20261028.md) before the annotation-only update below. A real training run now used C01 and assistant C03-C06 (50 release entries, 25 negative intervals). C02 and all ten sources of the historical benchmark remained excluded. The source-check count MAE was 5.083, with 2/7 positive clips exact and false counts in 1/5 negative clips. The research screen failed. No live camera connection occurred. The checkpoint, scripts and frozen predictions are preserved in `event-training-update-20261028.zip`.
+
 Research workspace for counting feta blocks added to production tanks in camera 11, associating completed tank transfers with weighing/storage in camera 15, and eventually reporting pallet departures from the aging room.
 
 **Status: experimental, not ready for production or live-camera counting.** The repository preserves the work and its failures so another session can continue without mistaking a successful training job for a successful counter.
@@ -37,7 +41,7 @@ python -m venv .venv
 
 The dependency file records the core versions used locally. `runtime_versions.json` includes additional package versions. Some historical scripts require FFmpeg, optional ML libraries, Kaggle GPU resources, or adjustment of original import paths; copying this snapshot does not establish that every historical script runs without setup on another machine.
 
-## Latest completed diagnostic: 27 October 2026
+## Previous diagnostic: 27 October 2026
 
 The native-frame temporal diagnostic used 12 reviewed clips from 10 original October files, containing 53 expert-confirmed additions. Each validation prediction excluded its entire original source file from training. These are reused development clips, not a fresh independent acceptance test.
 

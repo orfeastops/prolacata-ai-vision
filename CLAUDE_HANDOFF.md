@@ -1,5 +1,9 @@
 # Continue this project with Claude
 
+## Latest model experiment: 28 October 2026
+
+Read [EVENT_TRAINING_RESULT_20261028.md](EVENT_TRAINING_RESULT_20261028.md) before the annotation-only update below. A real training run now used C01 and assistant C03-C06 (50 release entries, 25 negative intervals). C02 and all ten sources of the historical benchmark remained excluded. The source-check count MAE was 5.083, with 2/7 positive clips exact and false counts in 1/5 negative clips. The research screen failed. No live camera connection occurred. The checkpoint, scripts and frozen predictions are preserved in `event-training-update-20261028.zip`.
+
 The owner requested this GitHub handoff specifically to continue with Claude. Preserve the current work, inspect the actual camera footage yourself, and prioritize measurable progress over repeated planning or asking the owner to label every movement.
 
 ## Update: 28 October 2026
@@ -29,8 +33,8 @@ The **root** `CURRENT_STATE.json`, `EXPERT_FEEDBACK_C01.json`, `EXPERT_FEEDBACK_
 
 ## What the next method must improve
 
-The latest count-rate diagnostic fit all 12 training clip totals but only 1 of 7 held-out positive totals exactly after rounding. Its held-out MAE was 2.364 blocks per clip, with false positive totals in 2 of 5 zero-count clips. It used generic frozen YOLO features and a temporal count-rate head, not dependable tracking of individual cheese blocks. The preceding strict object-trajectory approach accepted no complete transfers. Both are failed counting baselines, preserved for diagnosis.
+The previous v3 count-rate diagnostic fit all 12 training clip totals but only 1 of 7 held-out positive totals exactly after rounding. Its held-out MAE was 2.364 blocks per clip, with false positive totals in 2 of 5 zero-count clips. It used generic frozen YOLO features and a temporal count-rate head, not dependable tracking of individual cheese blocks. The preceding strict object-trajectory approach accepted no complete transfers. Both are failed counting baselines, preserved for diagnosis.
 
 Visible blue gloves and white cheese can guide candidate regions; contact, bending or a hand entering a tank alone is not enough. Follow the actual cheese or a carried group from source tray to destination, preserve group quantity, and account for separate releases without double counting. Some gestures adjust existing cheese or discard crumbs. The footage can support richer visual annotation; assistant-generated labels still need source-level validation rather than being declared correct because another model agrees.
 
-No live cameras are connected. Automatic tank switching, camera 11/15 association, verified camera wall-clock reporting, and production acceptance remain unfinished. No new training was started on C01 or C02.
+No live cameras are connected. Automatic tank switching, camera 11/15 association, verified camera wall-clock reporting, and production acceptance remain unfinished. The October 28 event model trained on C01; C02 remained source-held-out.
