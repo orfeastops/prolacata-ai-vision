@@ -1,0 +1,3626 @@
+{
+  "schema_version": "assistant-visual-events-v1",
+  "created_utc": "2026-10-28T02:21:14.961070+00:00",
+  "provenance": "assistant_visual_inspection_of_original_frames",
+  "is_trained_counter_output": false,
+  "is_human_verified_ground_truth": false,
+  "training_run_started": false,
+  "evaluation_ground_truth_eligible": false,
+  "scope": "October training candidates C03-C06 only; September 26 and October 3 are untouched.",
+  "timing": "Intervals of observed pickup/deposit; no claim of frame-exact release. Negative times and times after the original end are context only.",
+  "coverage": "All native frames cached. Visual review used 0.5-second overviews plus 0.1-0.4-second detail sheets at selected movements/boundaries. Not every cached frame was inspected.",
+  "policy": "No fixed blocks-per-hand or blocks-per-tray prior. Unknown material and ambiguous clip boundaries are masked, never silently converted to zero. Left/right means image side, not worker identity.",
+  "clips": [
+    {
+      "clip_id": "C03",
+      "source_sha256": "4f0cff8e3ea04eca7c722d6a5e50da1ef36b5fc9b6eba41d82709a61ccdf1154",
+      "source_file": "4f0cff8e3ea04eca_Camera_11_DVR_20261001124722_20261001130009_117670230.mp4",
+      "original_first_source_pts_s": 369.387,
+      "original_end_relative_pts_s": 29.92,
+      "roi_xyxy": [
+        800,
+        720,
+        1440,
+        1080
+      ],
+      "native_cached_frames": 571,
+      "original_clip_proposed_addition_subtotal": 10,
+      "original_clip_proposed_total": null,
+      "unresolved_event_ids": [
+        "C03-E02"
+      ],
+      "whole_transfer_sequences": 8,
+      "negative_intervals": 4,
+      "events": [
+        {
+          "action": "arrange_existing_cheese",
+          "side": "left",
+          "interval_s": [
+            0,
+            1.4
+          ],
+          "quantity": 0,
+          "quantity_confidence": "high",
+          "note": "Pre-roll shows the preceding deposit before the start; initial movements arrange existing cheese.",
+          "event_id": "C03-E01",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "4f0cff8e3ea04eca7c722d6a5e50da1ef36b5fc9b6eba41d82709a61ccdf1154",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "non_transfer_or_unresolved",
+          "original_clip_proposed_additions": 0,
+          "candidate_for_silver_training": true,
+          "evidence_frames": [
+            {
+              "cache_frame_index": 30,
+              "source_frame_index": 5523,
+              "clip_relative_pts_s": 0.0,
+              "source_pts_s": 369.387,
+              "image": "C03/frame_0030.jpg"
+            },
+            {
+              "cache_frame_index": 41,
+              "source_frame_index": 5534,
+              "clip_relative_pts_s": 0.72,
+              "source_pts_s": 370.107,
+              "image": "C03/frame_0041.jpg"
+            },
+            {
+              "cache_frame_index": 51,
+              "source_frame_index": 5544,
+              "clip_relative_pts_s": 1.4,
+              "source_pts_s": 370.787,
+              "image": "C03/frame_0051.jpg"
+            }
+          ]
+        },
+        {
+          "action": "unresolved_material_or_boundary",
+          "side": "right",
+          "interval_s": [
+            1.5,
+            10.5
+          ],
+          "quantity": null,
+          "quantity_confidence": "unresolved",
+          "note": "Material is removed from an apparently emptied tray, followed by reaching below the conveyor. A small white object is carried over the filling tank at approximately 6.5-7.5 s. Its origin and identity are occluded; do not force either zero or one whole block.",
+          "event_id": "C03-E02",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "4f0cff8e3ea04eca7c722d6a5e50da1ef36b5fc9b6eba41d82709a61ccdf1154",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "non_transfer_or_unresolved",
+          "original_clip_proposed_additions": null,
+          "candidate_for_silver_training": false,
+          "evidence_frames": [
+            {
+              "cache_frame_index": 53,
+              "source_frame_index": 5546,
+              "clip_relative_pts_s": 1.52,
+              "source_pts_s": 370.907,
+              "image": "C03/frame_0053.jpg"
+            },
+            {
+              "cache_frame_index": 119,
+              "source_frame_index": 5612,
+              "clip_relative_pts_s": 6.0,
+              "source_pts_s": 375.387,
+              "image": "C03/frame_0119.jpg"
+            },
+            {
+              "cache_frame_index": 187,
+              "source_frame_index": 5680,
+              "clip_relative_pts_s": 10.52,
+              "source_pts_s": 379.907,
+              "image": "C03/frame_0187.jpg"
+            }
+          ]
+        },
+        {
+          "action": "empty_hand_motion",
+          "side": "left",
+          "interval_s": [
+            3,
+            11.5
+          ],
+          "quantity": 0,
+          "quantity_confidence": "high",
+          "note": "Gestures and waiting; no observed new whole-block pickup.",
+          "event_id": "C03-E03",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "4f0cff8e3ea04eca7c722d6a5e50da1ef36b5fc9b6eba41d82709a61ccdf1154",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "non_transfer_or_unresolved",
+          "original_clip_proposed_additions": 0,
+          "candidate_for_silver_training": true,
+          "evidence_frames": [
+            {
+              "cache_frame_index": 75,
+              "source_frame_index": 5568,
+              "clip_relative_pts_s": 3.0,
+              "source_pts_s": 372.387,
+              "image": "C03/frame_0075.jpg"
+            },
+            {
+              "cache_frame_index": 138,
+              "source_frame_index": 5631,
+              "clip_relative_pts_s": 7.24,
+              "source_pts_s": 376.627,
+              "image": "C03/frame_0138.jpg"
+            },
+            {
+              "cache_frame_index": 202,
+              "source_frame_index": 5695,
+              "clip_relative_pts_s": 11.52,
+              "source_pts_s": 380.907,
+              "image": "C03/frame_0202.jpg"
+            }
+          ]
+        },
+        {
+          "action": "scrap_destination_motion",
+          "side": "right",
+          "interval_s": [
+            10.5,
+            12.5
+          ],
+          "quantity": 0,
+          "quantity_confidence": "high",
+          "note": "Material is taken to the upper-right scrap tank, not the filling tank.",
+          "event_id": "C03-E04",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "4f0cff8e3ea04eca7c722d6a5e50da1ef36b5fc9b6eba41d82709a61ccdf1154",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "non_transfer_or_unresolved",
+          "original_clip_proposed_additions": 0,
+          "candidate_for_silver_training": true,
+          "evidence_frames": [
+            {
+              "cache_frame_index": 187,
+              "source_frame_index": 5680,
+              "clip_relative_pts_s": 10.52,
+              "source_pts_s": 379.907,
+              "image": "C03/frame_0187.jpg"
+            },
+            {
+              "cache_frame_index": 202,
+              "source_frame_index": 5695,
+              "clip_relative_pts_s": 11.52,
+              "source_pts_s": 380.907,
+              "image": "C03/frame_0202.jpg"
+            },
+            {
+              "cache_frame_index": 217,
+              "source_frame_index": 5710,
+              "clip_relative_pts_s": 12.52,
+              "source_pts_s": 381.907,
+              "image": "C03/frame_0217.jpg"
+            }
+          ]
+        },
+        {
+          "action": "whole_block_transfer",
+          "side": "left",
+          "quantity": 2,
+          "pickup_interval_s": [
+            12.6,
+            13.2
+          ],
+          "deposit_interval_s": [
+            13.4,
+            14.4
+          ],
+          "quantity_confidence": "high",
+          "note": "Two raised tray blocks lifted and carried together; tray cells become exposed.",
+          "event_id": "C03-E05",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "4f0cff8e3ea04eca7c722d6a5e50da1ef36b5fc9b6eba41d82709a61ccdf1154",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "inside_original_clip",
+          "original_clip_proposed_additions": 2,
+          "candidate_for_silver_training": true,
+          "carry_window_s": [
+            13.2,
+            13.4
+          ],
+          "evidence_frames": [
+            {
+              "cache_frame_index": 218,
+              "source_frame_index": 5711,
+              "clip_relative_pts_s": 12.6,
+              "source_pts_s": 381.987,
+              "image": "C03/frame_0218.jpg"
+            },
+            {
+              "cache_frame_index": 227,
+              "source_frame_index": 5720,
+              "clip_relative_pts_s": 13.2,
+              "source_pts_s": 382.587,
+              "image": "C03/frame_0227.jpg"
+            },
+            {
+              "cache_frame_index": 229,
+              "source_frame_index": 5722,
+              "clip_relative_pts_s": 13.32,
+              "source_pts_s": 382.707,
+              "image": "C03/frame_0229.jpg"
+            },
+            {
+              "cache_frame_index": 245,
+              "source_frame_index": 5738,
+              "clip_relative_pts_s": 14.4,
+              "source_pts_s": 383.787,
+              "image": "C03/frame_0245.jpg"
+            }
+          ]
+        },
+        {
+          "action": "whole_block_transfer",
+          "side": "right",
+          "quantity": 2,
+          "pickup_interval_s": [
+            13.8,
+            14.4
+          ],
+          "deposit_interval_s": [
+            14.8,
+            15.6
+          ],
+          "quantity_confidence": "high",
+          "note": "Two adjacent tray blocks carried toward the filling tank; subsequent arranging is not a new addition.",
+          "event_id": "C03-E06",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "4f0cff8e3ea04eca7c722d6a5e50da1ef36b5fc9b6eba41d82709a61ccdf1154",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "inside_original_clip",
+          "original_clip_proposed_additions": 2,
+          "candidate_for_silver_training": true,
+          "carry_window_s": [
+            14.4,
+            14.8
+          ],
+          "evidence_frames": [
+            {
+              "cache_frame_index": 236,
+              "source_frame_index": 5729,
+              "clip_relative_pts_s": 13.8,
+              "source_pts_s": 383.187,
+              "image": "C03/frame_0236.jpg"
+            },
+            {
+              "cache_frame_index": 245,
+              "source_frame_index": 5738,
+              "clip_relative_pts_s": 14.4,
+              "source_pts_s": 383.787,
+              "image": "C03/frame_0245.jpg"
+            },
+            {
+              "cache_frame_index": 248,
+              "source_frame_index": 5741,
+              "clip_relative_pts_s": 14.6,
+              "source_pts_s": 383.987,
+              "image": "C03/frame_0248.jpg"
+            },
+            {
+              "cache_frame_index": 263,
+              "source_frame_index": 5756,
+              "clip_relative_pts_s": 15.6,
+              "source_pts_s": 384.987,
+              "image": "C03/frame_0263.jpg"
+            }
+          ]
+        },
+        {
+          "action": "whole_block_transfer",
+          "side": "left",
+          "quantity": 2,
+          "pickup_interval_s": [
+            16.0,
+            16.8
+          ],
+          "deposit_interval_s": [
+            16.8,
+            18.6
+          ],
+          "quantity_confidence": "high",
+          "note": "Two blocks carried with separate hands; placements are staggered within the interval.",
+          "event_id": "C03-E07",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "4f0cff8e3ea04eca7c722d6a5e50da1ef36b5fc9b6eba41d82709a61ccdf1154",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "inside_original_clip",
+          "original_clip_proposed_additions": 2,
+          "candidate_for_silver_training": true,
+          "carry_window_s": [
+            16.8,
+            16.8
+          ],
+          "evidence_frames": [
+            {
+              "cache_frame_index": 269,
+              "source_frame_index": 5762,
+              "clip_relative_pts_s": 16.0,
+              "source_pts_s": 385.387,
+              "image": "C03/frame_0269.jpg"
+            },
+            {
+              "cache_frame_index": 281,
+              "source_frame_index": 5774,
+              "clip_relative_pts_s": 16.8,
+              "source_pts_s": 386.187,
+              "image": "C03/frame_0281.jpg"
+            },
+            {
+              "cache_frame_index": 281,
+              "source_frame_index": 5774,
+              "clip_relative_pts_s": 16.8,
+              "source_pts_s": 386.187,
+              "image": "C03/frame_0281.jpg"
+            },
+            {
+              "cache_frame_index": 308,
+              "source_frame_index": 5801,
+              "clip_relative_pts_s": 18.6,
+              "source_pts_s": 387.987,
+              "image": "C03/frame_0308.jpg"
+            }
+          ]
+        },
+        {
+          "action": "whole_block_transfer",
+          "side": "right",
+          "quantity": 2,
+          "pickup_interval_s": [
+            19.0,
+            19.6
+          ],
+          "deposit_interval_s": [
+            20.0,
+            20.6
+          ],
+          "quantity_confidence": "high",
+          "note": "Two blocks lifted together and released into the tank.",
+          "event_id": "C03-E08",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "4f0cff8e3ea04eca7c722d6a5e50da1ef36b5fc9b6eba41d82709a61ccdf1154",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "inside_original_clip",
+          "original_clip_proposed_additions": 2,
+          "candidate_for_silver_training": true,
+          "carry_window_s": [
+            19.6,
+            20.0
+          ],
+          "evidence_frames": [
+            {
+              "cache_frame_index": 314,
+              "source_frame_index": 5807,
+              "clip_relative_pts_s": 19.0,
+              "source_pts_s": 388.387,
+              "image": "C03/frame_0314.jpg"
+            },
+            {
+              "cache_frame_index": 323,
+              "source_frame_index": 5816,
+              "clip_relative_pts_s": 19.6,
+              "source_pts_s": 388.987,
+              "image": "C03/frame_0323.jpg"
+            },
+            {
+              "cache_frame_index": 326,
+              "source_frame_index": 5819,
+              "clip_relative_pts_s": 19.8,
+              "source_pts_s": 389.187,
+              "image": "C03/frame_0326.jpg"
+            },
+            {
+              "cache_frame_index": 338,
+              "source_frame_index": 5831,
+              "clip_relative_pts_s": 20.6,
+              "source_pts_s": 389.987,
+              "image": "C03/frame_0338.jpg"
+            }
+          ]
+        },
+        {
+          "action": "whole_block_transfer",
+          "side": "left",
+          "quantity": 1,
+          "pickup_interval_s": [
+            22.2,
+            22.8
+          ],
+          "deposit_interval_s": [
+            23.2,
+            24.4
+          ],
+          "quantity_confidence": "high",
+          "note": "One remaining block is visible in this carry; no fixed two-per-motion rule.",
+          "event_id": "C03-E09",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "4f0cff8e3ea04eca7c722d6a5e50da1ef36b5fc9b6eba41d82709a61ccdf1154",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "inside_original_clip",
+          "original_clip_proposed_additions": 1,
+          "candidate_for_silver_training": true,
+          "carry_window_s": [
+            22.8,
+            23.2
+          ],
+          "evidence_frames": [
+            {
+              "cache_frame_index": 362,
+              "source_frame_index": 5855,
+              "clip_relative_pts_s": 22.2,
+              "source_pts_s": 391.587,
+              "image": "C03/frame_0362.jpg"
+            },
+            {
+              "cache_frame_index": 371,
+              "source_frame_index": 5864,
+              "clip_relative_pts_s": 22.8,
+              "source_pts_s": 392.187,
+              "image": "C03/frame_0371.jpg"
+            },
+            {
+              "cache_frame_index": 374,
+              "source_frame_index": 5867,
+              "clip_relative_pts_s": 23.0,
+              "source_pts_s": 392.387,
+              "image": "C03/frame_0374.jpg"
+            },
+            {
+              "cache_frame_index": 394,
+              "source_frame_index": 5887,
+              "clip_relative_pts_s": 24.4,
+              "source_pts_s": 393.787,
+              "image": "C03/frame_0394.jpg"
+            }
+          ]
+        },
+        {
+          "action": "whole_block_transfer",
+          "side": "right",
+          "quantity": 1,
+          "pickup_interval_s": [
+            22.4,
+            22.8
+          ],
+          "deposit_interval_s": [
+            23.4,
+            24.0
+          ],
+          "quantity_confidence": "high",
+          "note": "One block is lifted in one hand; the other hand remains empty.",
+          "event_id": "C03-E10",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "4f0cff8e3ea04eca7c722d6a5e50da1ef36b5fc9b6eba41d82709a61ccdf1154",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "inside_original_clip",
+          "original_clip_proposed_additions": 1,
+          "candidate_for_silver_training": true,
+          "carry_window_s": [
+            22.8,
+            23.4
+          ],
+          "evidence_frames": [
+            {
+              "cache_frame_index": 365,
+              "source_frame_index": 5858,
+              "clip_relative_pts_s": 22.4,
+              "source_pts_s": 391.787,
+              "image": "C03/frame_0365.jpg"
+            },
+            {
+              "cache_frame_index": 371,
+              "source_frame_index": 5864,
+              "clip_relative_pts_s": 22.8,
+              "source_pts_s": 392.187,
+              "image": "C03/frame_0371.jpg"
+            },
+            {
+              "cache_frame_index": 376,
+              "source_frame_index": 5869,
+              "clip_relative_pts_s": 23.12,
+              "source_pts_s": 392.507,
+              "image": "C03/frame_0376.jpg"
+            },
+            {
+              "cache_frame_index": 388,
+              "source_frame_index": 5881,
+              "clip_relative_pts_s": 24.0,
+              "source_pts_s": 393.387,
+              "image": "C03/frame_0388.jpg"
+            }
+          ]
+        },
+        {
+          "action": "tray_reposition",
+          "side": "right",
+          "interval_s": [
+            25.0,
+            28.4
+          ],
+          "quantity": 0,
+          "quantity_confidence": "high",
+          "note": "Empty tray is pushed away and the next loaded tray is moved into position.",
+          "event_id": "C03-E11",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "4f0cff8e3ea04eca7c722d6a5e50da1ef36b5fc9b6eba41d82709a61ccdf1154",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "non_transfer_or_unresolved",
+          "original_clip_proposed_additions": 0,
+          "candidate_for_silver_training": true,
+          "evidence_frames": [
+            {
+              "cache_frame_index": 403,
+              "source_frame_index": 5896,
+              "clip_relative_pts_s": 25.0,
+              "source_pts_s": 394.387,
+              "image": "C03/frame_0403.jpg"
+            },
+            {
+              "cache_frame_index": 429,
+              "source_frame_index": 5922,
+              "clip_relative_pts_s": 26.72,
+              "source_pts_s": 396.107,
+              "image": "C03/frame_0429.jpg"
+            },
+            {
+              "cache_frame_index": 454,
+              "source_frame_index": 5947,
+              "clip_relative_pts_s": 28.4,
+              "source_pts_s": 397.787,
+              "image": "C03/frame_0454.jpg"
+            }
+          ]
+        },
+        {
+          "action": "whole_block_transfer",
+          "side": "left",
+          "quantity": 2,
+          "pickup_interval_s": [
+            29.2,
+            29.8
+          ],
+          "deposit_interval_s": [
+            30.2,
+            31.0
+          ],
+          "quantity_confidence": "high",
+          "note": "Context after the original clip shows the deposit; exclude these two from the original 0-29.96 s interval.",
+          "event_id": "C03-E12",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "4f0cff8e3ea04eca7c722d6a5e50da1ef36b5fc9b6eba41d82709a61ccdf1154",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "after_original_clip",
+          "original_clip_proposed_additions": 0,
+          "candidate_for_silver_training": true,
+          "carry_window_s": [
+            29.8,
+            30.2
+          ],
+          "evidence_frames": [
+            {
+              "cache_frame_index": 466,
+              "source_frame_index": 5959,
+              "clip_relative_pts_s": 29.2,
+              "source_pts_s": 398.587,
+              "image": "C03/frame_0466.jpg"
+            },
+            {
+              "cache_frame_index": 475,
+              "source_frame_index": 5968,
+              "clip_relative_pts_s": 29.8,
+              "source_pts_s": 399.187,
+              "image": "C03/frame_0475.jpg"
+            },
+            {
+              "cache_frame_index": 478,
+              "source_frame_index": 5971,
+              "clip_relative_pts_s": 30.0,
+              "source_pts_s": 399.387,
+              "image": "C03/frame_0478.jpg"
+            },
+            {
+              "cache_frame_index": 493,
+              "source_frame_index": 5986,
+              "clip_relative_pts_s": 31.0,
+              "source_pts_s": 400.387,
+              "image": "C03/frame_0493.jpg"
+            }
+          ]
+        },
+        {
+          "action": "whole_block_transfer",
+          "side": "right",
+          "quantity": 2,
+          "pickup_interval_s": [
+            29.4,
+            30.0
+          ],
+          "deposit_interval_s": [
+            30.6,
+            31.4
+          ],
+          "quantity_confidence": "high",
+          "note": "Context after the original clip shows the deposit; exclude these two from the original interval.",
+          "event_id": "C03-E13",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "4f0cff8e3ea04eca7c722d6a5e50da1ef36b5fc9b6eba41d82709a61ccdf1154",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "after_original_clip",
+          "original_clip_proposed_additions": 0,
+          "candidate_for_silver_training": true,
+          "carry_window_s": [
+            30.0,
+            30.6
+          ],
+          "evidence_frames": [
+            {
+              "cache_frame_index": 469,
+              "source_frame_index": 5962,
+              "clip_relative_pts_s": 29.4,
+              "source_pts_s": 398.787,
+              "image": "C03/frame_0469.jpg"
+            },
+            {
+              "cache_frame_index": 478,
+              "source_frame_index": 5971,
+              "clip_relative_pts_s": 30.0,
+              "source_pts_s": 399.387,
+              "image": "C03/frame_0478.jpg"
+            },
+            {
+              "cache_frame_index": 483,
+              "source_frame_index": 5976,
+              "clip_relative_pts_s": 30.32,
+              "source_pts_s": 399.707,
+              "image": "C03/frame_0483.jpg"
+            },
+            {
+              "cache_frame_index": 499,
+              "source_frame_index": 5992,
+              "clip_relative_pts_s": 31.4,
+              "source_pts_s": 400.787,
+              "image": "C03/frame_0499.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "clip_id": "C04",
+      "source_sha256": "1038124164c6533f084b98433a9cdef4241010df38a41716164900088f3068ce",
+      "source_file": "1038124164c6533f_Camera_11_DVR_20261021075149_20261021075417_2780955.mp4",
+      "original_first_source_pts_s": 58.588,
+      "original_end_relative_pts_s": 29.92,
+      "roi_xyxy": [
+        800,
+        720,
+        1440,
+        1080
+      ],
+      "native_cached_frames": 572,
+      "original_clip_proposed_addition_subtotal": 18,
+      "original_clip_proposed_total": 18,
+      "unresolved_event_ids": [],
+      "whole_transfer_sequences": 10,
+      "negative_intervals": 7,
+      "events": [
+        {
+          "action": "whole_block_transfer",
+          "side": "left",
+          "quantity": 2,
+          "pickup_interval_s": [
+            -0.8,
+            -0.2
+          ],
+          "deposit_interval_s": [
+            0.2,
+            1.0
+          ],
+          "quantity_confidence": "high",
+          "note": "Pickup begins before the original clip. Pre-roll shows one rectangular block per hand; deposit is inside the clip.",
+          "event_id": "C04-E01",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "1038124164c6533f084b98433a9cdef4241010df38a41716164900088f3068ce",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "inside_original_clip",
+          "original_clip_proposed_additions": 2,
+          "candidate_for_silver_training": true,
+          "carry_window_s": [
+            -0.2,
+            0.2
+          ],
+          "evidence_frames": [
+            {
+              "cache_frame_index": 18,
+              "source_frame_index": 865,
+              "clip_relative_pts_s": -0.8,
+              "source_pts_s": 57.788,
+              "image": "C04/frame_0018.jpg"
+            },
+            {
+              "cache_frame_index": 27,
+              "source_frame_index": 874,
+              "clip_relative_pts_s": -0.2,
+              "source_pts_s": 58.388,
+              "image": "C04/frame_0027.jpg"
+            },
+            {
+              "cache_frame_index": 30,
+              "source_frame_index": 877,
+              "clip_relative_pts_s": 0.0,
+              "source_pts_s": 58.588,
+              "image": "C04/frame_0030.jpg"
+            },
+            {
+              "cache_frame_index": 45,
+              "source_frame_index": 892,
+              "clip_relative_pts_s": 1.0,
+              "source_pts_s": 59.588,
+              "image": "C04/frame_0045.jpg"
+            }
+          ]
+        },
+        {
+          "action": "scrap_destination_motion",
+          "side": "right",
+          "interval_s": [
+            0,
+            1
+          ],
+          "quantity": 0,
+          "quantity_confidence": "high",
+          "note": "Clearing material toward the scrap area; no whole block deposited into the filling tank.",
+          "event_id": "C04-E02",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "1038124164c6533f084b98433a9cdef4241010df38a41716164900088f3068ce",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "non_transfer_or_unresolved",
+          "original_clip_proposed_additions": 0,
+          "candidate_for_silver_training": true,
+          "evidence_frames": [
+            {
+              "cache_frame_index": 30,
+              "source_frame_index": 877,
+              "clip_relative_pts_s": 0.0,
+              "source_pts_s": 58.588,
+              "image": "C04/frame_0030.jpg"
+            },
+            {
+              "cache_frame_index": 38,
+              "source_frame_index": 885,
+              "clip_relative_pts_s": 0.52,
+              "source_pts_s": 59.108,
+              "image": "C04/frame_0038.jpg"
+            },
+            {
+              "cache_frame_index": 45,
+              "source_frame_index": 892,
+              "clip_relative_pts_s": 1.0,
+              "source_pts_s": 59.588,
+              "image": "C04/frame_0045.jpg"
+            }
+          ]
+        },
+        {
+          "action": "whole_block_transfer",
+          "side": "left",
+          "quantity": 2,
+          "pickup_interval_s": [
+            2.4,
+            3.2
+          ],
+          "deposit_interval_s": [
+            3.5,
+            4.5
+          ],
+          "quantity_confidence": "high",
+          "note": "One separate whole block in each hand.",
+          "event_id": "C04-E03",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "1038124164c6533f084b98433a9cdef4241010df38a41716164900088f3068ce",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "inside_original_clip",
+          "original_clip_proposed_additions": 2,
+          "candidate_for_silver_training": true,
+          "carry_window_s": [
+            3.2,
+            3.5
+          ],
+          "evidence_frames": [
+            {
+              "cache_frame_index": 66,
+              "source_frame_index": 913,
+              "clip_relative_pts_s": 2.4,
+              "source_pts_s": 60.988,
+              "image": "C04/frame_0066.jpg"
+            },
+            {
+              "cache_frame_index": 78,
+              "source_frame_index": 925,
+              "clip_relative_pts_s": 3.2,
+              "source_pts_s": 61.788,
+              "image": "C04/frame_0078.jpg"
+            },
+            {
+              "cache_frame_index": 80,
+              "source_frame_index": 927,
+              "clip_relative_pts_s": 3.32,
+              "source_pts_s": 61.908,
+              "image": "C04/frame_0080.jpg"
+            },
+            {
+              "cache_frame_index": 98,
+              "source_frame_index": 945,
+              "clip_relative_pts_s": 4.52,
+              "source_pts_s": 63.108,
+              "image": "C04/frame_0098.jpg"
+            }
+          ]
+        },
+        {
+          "action": "whole_block_transfer",
+          "side": "right",
+          "quantity": 2,
+          "pickup_interval_s": [
+            3.6,
+            4.6
+          ],
+          "deposit_interval_s": [
+            5.0,
+            5.8
+          ],
+          "quantity_confidence": "high",
+          "note": "Two blocks carried separately and placed in the filling tank.",
+          "event_id": "C04-E04",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "1038124164c6533f084b98433a9cdef4241010df38a41716164900088f3068ce",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "inside_original_clip",
+          "original_clip_proposed_additions": 2,
+          "candidate_for_silver_training": true,
+          "carry_window_s": [
+            4.6,
+            5.0
+          ],
+          "evidence_frames": [
+            {
+              "cache_frame_index": 84,
+              "source_frame_index": 931,
+              "clip_relative_pts_s": 3.6,
+              "source_pts_s": 62.188,
+              "image": "C04/frame_0084.jpg"
+            },
+            {
+              "cache_frame_index": 99,
+              "source_frame_index": 946,
+              "clip_relative_pts_s": 4.6,
+              "source_pts_s": 63.188,
+              "image": "C04/frame_0099.jpg"
+            },
+            {
+              "cache_frame_index": 102,
+              "source_frame_index": 949,
+              "clip_relative_pts_s": 4.8,
+              "source_pts_s": 63.388,
+              "image": "C04/frame_0102.jpg"
+            },
+            {
+              "cache_frame_index": 117,
+              "source_frame_index": 964,
+              "clip_relative_pts_s": 5.8,
+              "source_pts_s": 64.388,
+              "image": "C04/frame_0117.jpg"
+            }
+          ]
+        },
+        {
+          "action": "empty_hand_or_residue_motion",
+          "side": "left",
+          "interval_s": [
+            5.0,
+            6.8
+          ],
+          "quantity": 0,
+          "quantity_confidence": "high",
+          "note": "Touching/scraping the emptied tray and hand motion; no raised whole block is lifted.",
+          "event_id": "C04-E05",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "1038124164c6533f084b98433a9cdef4241010df38a41716164900088f3068ce",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "non_transfer_or_unresolved",
+          "original_clip_proposed_additions": 0,
+          "candidate_for_silver_training": true,
+          "evidence_frames": [
+            {
+              "cache_frame_index": 105,
+              "source_frame_index": 952,
+              "clip_relative_pts_s": 5.0,
+              "source_pts_s": 63.588,
+              "image": "C04/frame_0105.jpg"
+            },
+            {
+              "cache_frame_index": 119,
+              "source_frame_index": 966,
+              "clip_relative_pts_s": 5.92,
+              "source_pts_s": 64.508,
+              "image": "C04/frame_0119.jpg"
+            },
+            {
+              "cache_frame_index": 132,
+              "source_frame_index": 979,
+              "clip_relative_pts_s": 6.8,
+              "source_pts_s": 65.388,
+              "image": "C04/frame_0132.jpg"
+            }
+          ]
+        },
+        {
+          "action": "tray_reposition",
+          "side": "right",
+          "interval_s": [
+            6.4,
+            8.0
+          ],
+          "quantity": 0,
+          "quantity_confidence": "high",
+          "note": "Moves the empty tray along the conveyor.",
+          "event_id": "C04-E06",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "1038124164c6533f084b98433a9cdef4241010df38a41716164900088f3068ce",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "non_transfer_or_unresolved",
+          "original_clip_proposed_additions": 0,
+          "candidate_for_silver_training": true,
+          "evidence_frames": [
+            {
+              "cache_frame_index": 126,
+              "source_frame_index": 973,
+              "clip_relative_pts_s": 6.4,
+              "source_pts_s": 64.988,
+              "image": "C04/frame_0126.jpg"
+            },
+            {
+              "cache_frame_index": 138,
+              "source_frame_index": 985,
+              "clip_relative_pts_s": 7.2,
+              "source_pts_s": 65.788,
+              "image": "C04/frame_0138.jpg"
+            },
+            {
+              "cache_frame_index": 149,
+              "source_frame_index": 996,
+              "clip_relative_pts_s": 8.0,
+              "source_pts_s": 66.588,
+              "image": "C04/frame_0149.jpg"
+            }
+          ]
+        },
+        {
+          "action": "whole_block_transfer",
+          "side": "left",
+          "quantity": 2,
+          "pickup_interval_s": [
+            10.8,
+            11.6
+          ],
+          "deposit_interval_s": [
+            11.8,
+            12.6
+          ],
+          "quantity_confidence": "high",
+          "note": "Two visible blocks leave the loaded tray.",
+          "event_id": "C04-E07",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "1038124164c6533f084b98433a9cdef4241010df38a41716164900088f3068ce",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "inside_original_clip",
+          "original_clip_proposed_additions": 2,
+          "candidate_for_silver_training": true,
+          "carry_window_s": [
+            11.6,
+            11.8
+          ],
+          "evidence_frames": [
+            {
+              "cache_frame_index": 191,
+              "source_frame_index": 1038,
+              "clip_relative_pts_s": 10.8,
+              "source_pts_s": 69.388,
+              "image": "C04/frame_0191.jpg"
+            },
+            {
+              "cache_frame_index": 203,
+              "source_frame_index": 1050,
+              "clip_relative_pts_s": 11.6,
+              "source_pts_s": 70.188,
+              "image": "C04/frame_0203.jpg"
+            },
+            {
+              "cache_frame_index": 205,
+              "source_frame_index": 1052,
+              "clip_relative_pts_s": 11.72,
+              "source_pts_s": 70.308,
+              "image": "C04/frame_0205.jpg"
+            },
+            {
+              "cache_frame_index": 218,
+              "source_frame_index": 1065,
+              "clip_relative_pts_s": 12.6,
+              "source_pts_s": 71.188,
+              "image": "C04/frame_0218.jpg"
+            }
+          ]
+        },
+        {
+          "action": "whole_block_transfer",
+          "side": "left",
+          "quantity": 2,
+          "pickup_interval_s": [
+            14.0,
+            14.8
+          ],
+          "deposit_interval_s": [
+            15.2,
+            16.0
+          ],
+          "quantity_confidence": "high",
+          "note": "Two visible blocks are carried together.",
+          "event_id": "C04-E08",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "1038124164c6533f084b98433a9cdef4241010df38a41716164900088f3068ce",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "inside_original_clip",
+          "original_clip_proposed_additions": 2,
+          "candidate_for_silver_training": true,
+          "carry_window_s": [
+            14.8,
+            15.2
+          ],
+          "evidence_frames": [
+            {
+              "cache_frame_index": 239,
+              "source_frame_index": 1086,
+              "clip_relative_pts_s": 14.0,
+              "source_pts_s": 72.588,
+              "image": "C04/frame_0239.jpg"
+            },
+            {
+              "cache_frame_index": 251,
+              "source_frame_index": 1098,
+              "clip_relative_pts_s": 14.8,
+              "source_pts_s": 73.388,
+              "image": "C04/frame_0251.jpg"
+            },
+            {
+              "cache_frame_index": 254,
+              "source_frame_index": 1101,
+              "clip_relative_pts_s": 15.0,
+              "source_pts_s": 73.588,
+              "image": "C04/frame_0254.jpg"
+            },
+            {
+              "cache_frame_index": 269,
+              "source_frame_index": 1116,
+              "clip_relative_pts_s": 16.0,
+              "source_pts_s": 74.588,
+              "image": "C04/frame_0269.jpg"
+            }
+          ]
+        },
+        {
+          "action": "empty_hand_motion",
+          "side": "right",
+          "interval_s": [
+            12.0,
+            17.2
+          ],
+          "quantity": 0,
+          "quantity_confidence": "high",
+          "note": "Repeated gestures near face/chest while the left side transfers cheese.",
+          "event_id": "C04-E09",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "1038124164c6533f084b98433a9cdef4241010df38a41716164900088f3068ce",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "non_transfer_or_unresolved",
+          "original_clip_proposed_additions": 0,
+          "candidate_for_silver_training": true,
+          "evidence_frames": [
+            {
+              "cache_frame_index": 209,
+              "source_frame_index": 1056,
+              "clip_relative_pts_s": 12.0,
+              "source_pts_s": 70.588,
+              "image": "C04/frame_0209.jpg"
+            },
+            {
+              "cache_frame_index": 248,
+              "source_frame_index": 1095,
+              "clip_relative_pts_s": 14.6,
+              "source_pts_s": 73.188,
+              "image": "C04/frame_0248.jpg"
+            },
+            {
+              "cache_frame_index": 287,
+              "source_frame_index": 1134,
+              "clip_relative_pts_s": 17.2,
+              "source_pts_s": 75.788,
+              "image": "C04/frame_0287.jpg"
+            }
+          ]
+        },
+        {
+          "action": "whole_block_transfer",
+          "side": "left",
+          "quantity": 2,
+          "pickup_interval_s": [
+            17.2,
+            18.0
+          ],
+          "deposit_interval_s": [
+            18.2,
+            19.0
+          ],
+          "quantity_confidence": "high",
+          "note": "Two visible blocks lifted and deposited.",
+          "event_id": "C04-E10",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "1038124164c6533f084b98433a9cdef4241010df38a41716164900088f3068ce",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "inside_original_clip",
+          "original_clip_proposed_additions": 2,
+          "candidate_for_silver_training": true,
+          "carry_window_s": [
+            18.0,
+            18.2
+          ],
+          "evidence_frames": [
+            {
+              "cache_frame_index": 287,
+              "source_frame_index": 1134,
+              "clip_relative_pts_s": 17.2,
+              "source_pts_s": 75.788,
+              "image": "C04/frame_0287.jpg"
+            },
+            {
+              "cache_frame_index": 299,
+              "source_frame_index": 1146,
+              "clip_relative_pts_s": 18.0,
+              "source_pts_s": 76.588,
+              "image": "C04/frame_0299.jpg"
+            },
+            {
+              "cache_frame_index": 301,
+              "source_frame_index": 1148,
+              "clip_relative_pts_s": 18.12,
+              "source_pts_s": 76.708,
+              "image": "C04/frame_0301.jpg"
+            },
+            {
+              "cache_frame_index": 314,
+              "source_frame_index": 1161,
+              "clip_relative_pts_s": 19.0,
+              "source_pts_s": 77.588,
+              "image": "C04/frame_0314.jpg"
+            }
+          ]
+        },
+        {
+          "action": "touch_without_pickup",
+          "side": "right",
+          "interval_s": [
+            17.4,
+            19.6
+          ],
+          "quantity": 0,
+          "quantity_confidence": "high",
+          "note": "Touches the cheese/tray then withdraws and gestures with empty hands. Contact alone must not increment the count.",
+          "event_id": "C04-E11",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "1038124164c6533f084b98433a9cdef4241010df38a41716164900088f3068ce",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "non_transfer_or_unresolved",
+          "original_clip_proposed_additions": 0,
+          "candidate_for_silver_training": true,
+          "evidence_frames": [
+            {
+              "cache_frame_index": 290,
+              "source_frame_index": 1137,
+              "clip_relative_pts_s": 17.4,
+              "source_pts_s": 75.988,
+              "image": "C04/frame_0290.jpg"
+            },
+            {
+              "cache_frame_index": 307,
+              "source_frame_index": 1154,
+              "clip_relative_pts_s": 18.52,
+              "source_pts_s": 77.108,
+              "image": "C04/frame_0307.jpg"
+            },
+            {
+              "cache_frame_index": 323,
+              "source_frame_index": 1170,
+              "clip_relative_pts_s": 19.6,
+              "source_pts_s": 78.188,
+              "image": "C04/frame_0323.jpg"
+            }
+          ]
+        },
+        {
+          "action": "whole_block_transfer",
+          "side": "right",
+          "quantity": 2,
+          "pickup_interval_s": [
+            20.0,
+            21.0
+          ],
+          "deposit_interval_s": [
+            21.4,
+            22.6
+          ],
+          "quantity_confidence": "high",
+          "note": "Two separate blocks, one in each hand, are taken to the tank.",
+          "event_id": "C04-E12",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "1038124164c6533f084b98433a9cdef4241010df38a41716164900088f3068ce",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "inside_original_clip",
+          "original_clip_proposed_additions": 2,
+          "candidate_for_silver_training": true,
+          "carry_window_s": [
+            21.0,
+            21.4
+          ],
+          "evidence_frames": [
+            {
+              "cache_frame_index": 329,
+              "source_frame_index": 1176,
+              "clip_relative_pts_s": 20.0,
+              "source_pts_s": 78.588,
+              "image": "C04/frame_0329.jpg"
+            },
+            {
+              "cache_frame_index": 344,
+              "source_frame_index": 1191,
+              "clip_relative_pts_s": 21.0,
+              "source_pts_s": 79.588,
+              "image": "C04/frame_0344.jpg"
+            },
+            {
+              "cache_frame_index": 347,
+              "source_frame_index": 1194,
+              "clip_relative_pts_s": 21.2,
+              "source_pts_s": 79.788,
+              "image": "C04/frame_0347.jpg"
+            },
+            {
+              "cache_frame_index": 368,
+              "source_frame_index": 1215,
+              "clip_relative_pts_s": 22.6,
+              "source_pts_s": 81.188,
+              "image": "C04/frame_0368.jpg"
+            }
+          ]
+        },
+        {
+          "action": "whole_block_transfer",
+          "side": "left",
+          "quantity": 2,
+          "pickup_interval_s": [
+            22.6,
+            23.2
+          ],
+          "deposit_interval_s": [
+            23.4,
+            24.2
+          ],
+          "quantity_confidence": "high",
+          "note": "Two remaining blocks lifted together.",
+          "event_id": "C04-E13",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "1038124164c6533f084b98433a9cdef4241010df38a41716164900088f3068ce",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "inside_original_clip",
+          "original_clip_proposed_additions": 2,
+          "candidate_for_silver_training": true,
+          "carry_window_s": [
+            23.2,
+            23.4
+          ],
+          "evidence_frames": [
+            {
+              "cache_frame_index": 368,
+              "source_frame_index": 1215,
+              "clip_relative_pts_s": 22.6,
+              "source_pts_s": 81.188,
+              "image": "C04/frame_0368.jpg"
+            },
+            {
+              "cache_frame_index": 377,
+              "source_frame_index": 1224,
+              "clip_relative_pts_s": 23.2,
+              "source_pts_s": 81.788,
+              "image": "C04/frame_0377.jpg"
+            },
+            {
+              "cache_frame_index": 379,
+              "source_frame_index": 1226,
+              "clip_relative_pts_s": 23.32,
+              "source_pts_s": 81.908,
+              "image": "C04/frame_0379.jpg"
+            },
+            {
+              "cache_frame_index": 392,
+              "source_frame_index": 1239,
+              "clip_relative_pts_s": 24.2,
+              "source_pts_s": 82.788,
+              "image": "C04/frame_0392.jpg"
+            }
+          ]
+        },
+        {
+          "action": "arrange_existing_cheese",
+          "side": "left",
+          "interval_s": [
+            24.4,
+            25.6
+          ],
+          "quantity": 0,
+          "quantity_confidence": "high",
+          "note": "Repositions blocks already inside the tank without another pickup.",
+          "event_id": "C04-E14",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "1038124164c6533f084b98433a9cdef4241010df38a41716164900088f3068ce",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "non_transfer_or_unresolved",
+          "original_clip_proposed_additions": 0,
+          "candidate_for_silver_training": true,
+          "evidence_frames": [
+            {
+              "cache_frame_index": 395,
+              "source_frame_index": 1242,
+              "clip_relative_pts_s": 24.4,
+              "source_pts_s": 82.988,
+              "image": "C04/frame_0395.jpg"
+            },
+            {
+              "cache_frame_index": 404,
+              "source_frame_index": 1251,
+              "clip_relative_pts_s": 25.0,
+              "source_pts_s": 83.588,
+              "image": "C04/frame_0404.jpg"
+            },
+            {
+              "cache_frame_index": 413,
+              "source_frame_index": 1260,
+              "clip_relative_pts_s": 25.6,
+              "source_pts_s": 84.188,
+              "image": "C04/frame_0413.jpg"
+            }
+          ]
+        },
+        {
+          "action": "tray_reposition",
+          "side": "right",
+          "interval_s": [
+            24.0,
+            28.0
+          ],
+          "quantity": 0,
+          "quantity_confidence": "high",
+          "note": "Pushes empty tray away and helps position the next loaded tray.",
+          "event_id": "C04-E15",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "1038124164c6533f084b98433a9cdef4241010df38a41716164900088f3068ce",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "non_transfer_or_unresolved",
+          "original_clip_proposed_additions": 0,
+          "candidate_for_silver_training": true,
+          "evidence_frames": [
+            {
+              "cache_frame_index": 389,
+              "source_frame_index": 1236,
+              "clip_relative_pts_s": 24.0,
+              "source_pts_s": 82.588,
+              "image": "C04/frame_0389.jpg"
+            },
+            {
+              "cache_frame_index": 419,
+              "source_frame_index": 1266,
+              "clip_relative_pts_s": 26.0,
+              "source_pts_s": 84.588,
+              "image": "C04/frame_0419.jpg"
+            },
+            {
+              "cache_frame_index": 449,
+              "source_frame_index": 1296,
+              "clip_relative_pts_s": 28.0,
+              "source_pts_s": 86.588,
+              "image": "C04/frame_0449.jpg"
+            }
+          ]
+        },
+        {
+          "action": "whole_block_transfer",
+          "side": "left",
+          "quantity": 2,
+          "pickup_interval_s": [
+            28.4,
+            29.0
+          ],
+          "deposit_interval_s": [
+            29.4,
+            29.8
+          ],
+          "quantity_confidence": "high",
+          "note": "Both deposit and pickup are inside the original clip.",
+          "event_id": "C04-E16",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "1038124164c6533f084b98433a9cdef4241010df38a41716164900088f3068ce",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "inside_original_clip",
+          "original_clip_proposed_additions": 2,
+          "candidate_for_silver_training": true,
+          "carry_window_s": [
+            29.0,
+            29.4
+          ],
+          "evidence_frames": [
+            {
+              "cache_frame_index": 454,
+              "source_frame_index": 1301,
+              "clip_relative_pts_s": 28.4,
+              "source_pts_s": 86.988,
+              "image": "C04/frame_0454.jpg"
+            },
+            {
+              "cache_frame_index": 463,
+              "source_frame_index": 1310,
+              "clip_relative_pts_s": 29.0,
+              "source_pts_s": 87.588,
+              "image": "C04/frame_0463.jpg"
+            },
+            {
+              "cache_frame_index": 466,
+              "source_frame_index": 1313,
+              "clip_relative_pts_s": 29.2,
+              "source_pts_s": 87.788,
+              "image": "C04/frame_0466.jpg"
+            },
+            {
+              "cache_frame_index": 475,
+              "source_frame_index": 1322,
+              "clip_relative_pts_s": 29.8,
+              "source_pts_s": 88.388,
+              "image": "C04/frame_0475.jpg"
+            }
+          ]
+        },
+        {
+          "action": "whole_block_transfer",
+          "side": "right",
+          "quantity": 2,
+          "pickup_interval_s": [
+            29.2,
+            29.8
+          ],
+          "deposit_interval_s": [
+            30.2,
+            31.2
+          ],
+          "quantity_confidence": "high",
+          "note": "Pickup is inside the original clip, deposit is after its end; exclude from the original-clip addition count.",
+          "event_id": "C04-E17",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "1038124164c6533f084b98433a9cdef4241010df38a41716164900088f3068ce",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "after_original_clip",
+          "original_clip_proposed_additions": 0,
+          "candidate_for_silver_training": true,
+          "carry_window_s": [
+            29.8,
+            30.2
+          ],
+          "evidence_frames": [
+            {
+              "cache_frame_index": 466,
+              "source_frame_index": 1313,
+              "clip_relative_pts_s": 29.2,
+              "source_pts_s": 87.788,
+              "image": "C04/frame_0466.jpg"
+            },
+            {
+              "cache_frame_index": 475,
+              "source_frame_index": 1322,
+              "clip_relative_pts_s": 29.8,
+              "source_pts_s": 88.388,
+              "image": "C04/frame_0475.jpg"
+            },
+            {
+              "cache_frame_index": 478,
+              "source_frame_index": 1325,
+              "clip_relative_pts_s": 30.0,
+              "source_pts_s": 88.588,
+              "image": "C04/frame_0478.jpg"
+            },
+            {
+              "cache_frame_index": 496,
+              "source_frame_index": 1343,
+              "clip_relative_pts_s": 31.2,
+              "source_pts_s": 89.788,
+              "image": "C04/frame_0496.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "clip_id": "C05",
+      "source_sha256": "1fb299d9840871c710c9bcf718eea2d3f4032add39cc46dab96c29499422ea2e",
+      "source_file": "1fb299d9840871c7_Camera_11_DVR_20261021105401_20261021105607_2832857.mp4",
+      "original_first_source_pts_s": 39.64,
+      "original_end_relative_pts_s": 29.96,
+      "roi_xyxy": [
+        800,
+        720,
+        1440,
+        1080
+      ],
+      "native_cached_frames": 572,
+      "original_clip_proposed_addition_subtotal": 18,
+      "original_clip_proposed_total": 18,
+      "unresolved_event_ids": [],
+      "whole_transfer_sequences": 10,
+      "negative_intervals": 7,
+      "events": [
+        {
+          "action": "whole_block_transfer",
+          "side": "left",
+          "quantity": 2,
+          "pickup_interval_s": [
+            -1.8,
+            -1.0
+          ],
+          "deposit_interval_s": [
+            -0.6,
+            -0.12
+          ],
+          "quantity_confidence": "high",
+          "note": "Pre-roll-only transfer. Both blocks appear deposited before t=0; excluded from the original-clip sum.",
+          "event_id": "C05-E01",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "1fb299d9840871c710c9bcf718eea2d3f4032add39cc46dab96c29499422ea2e",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "before_original_clip",
+          "original_clip_proposed_additions": 0,
+          "candidate_for_silver_training": true,
+          "carry_window_s": [
+            -1.0,
+            -0.6
+          ],
+          "evidence_frames": [
+            {
+              "cache_frame_index": 3,
+              "source_frame_index": 566,
+              "clip_relative_pts_s": -1.8,
+              "source_pts_s": 37.84,
+              "image": "C05/frame_0003.jpg"
+            },
+            {
+              "cache_frame_index": 15,
+              "source_frame_index": 578,
+              "clip_relative_pts_s": -1.0,
+              "source_pts_s": 38.64,
+              "image": "C05/frame_0015.jpg"
+            },
+            {
+              "cache_frame_index": 18,
+              "source_frame_index": 581,
+              "clip_relative_pts_s": -0.8,
+              "source_pts_s": 38.84,
+              "image": "C05/frame_0018.jpg"
+            },
+            {
+              "cache_frame_index": 28,
+              "source_frame_index": 591,
+              "clip_relative_pts_s": -0.12,
+              "source_pts_s": 39.52,
+              "image": "C05/frame_0028.jpg"
+            }
+          ]
+        },
+        {
+          "action": "whole_block_transfer",
+          "side": "right",
+          "quantity": 2,
+          "pickup_interval_s": [
+            -1.2,
+            -0.6
+          ],
+          "deposit_interval_s": [
+            0.2,
+            1.6
+          ],
+          "quantity_confidence": "high",
+          "note": "Pickup is before the clip; two separately held blocks are deposited after the start.",
+          "event_id": "C05-E02",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "1fb299d9840871c710c9bcf718eea2d3f4032add39cc46dab96c29499422ea2e",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "inside_original_clip",
+          "original_clip_proposed_additions": 2,
+          "candidate_for_silver_training": true,
+          "carry_window_s": [
+            -0.6,
+            0.2
+          ],
+          "evidence_frames": [
+            {
+              "cache_frame_index": 12,
+              "source_frame_index": 575,
+              "clip_relative_pts_s": -1.2,
+              "source_pts_s": 38.44,
+              "image": "C05/frame_0012.jpg"
+            },
+            {
+              "cache_frame_index": 21,
+              "source_frame_index": 584,
+              "clip_relative_pts_s": -0.6,
+              "source_pts_s": 39.04,
+              "image": "C05/frame_0021.jpg"
+            },
+            {
+              "cache_frame_index": 27,
+              "source_frame_index": 590,
+              "clip_relative_pts_s": -0.2,
+              "source_pts_s": 39.44,
+              "image": "C05/frame_0027.jpg"
+            },
+            {
+              "cache_frame_index": 54,
+              "source_frame_index": 617,
+              "clip_relative_pts_s": 1.6,
+              "source_pts_s": 41.24,
+              "image": "C05/frame_0054.jpg"
+            }
+          ]
+        },
+        {
+          "action": "whole_block_transfer",
+          "side": "left",
+          "quantity": 2,
+          "pickup_interval_s": [
+            1.2,
+            1.8
+          ],
+          "deposit_interval_s": [
+            2.2,
+            3.6
+          ],
+          "quantity_confidence": "high",
+          "note": "One block per hand; placing and subsequent arranging overlap in time.",
+          "event_id": "C05-E03",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "1fb299d9840871c710c9bcf718eea2d3f4032add39cc46dab96c29499422ea2e",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "inside_original_clip",
+          "original_clip_proposed_additions": 2,
+          "candidate_for_silver_training": true,
+          "carry_window_s": [
+            1.8,
+            2.2
+          ],
+          "evidence_frames": [
+            {
+              "cache_frame_index": 48,
+              "source_frame_index": 611,
+              "clip_relative_pts_s": 1.2,
+              "source_pts_s": 40.84,
+              "image": "C05/frame_0048.jpg"
+            },
+            {
+              "cache_frame_index": 57,
+              "source_frame_index": 620,
+              "clip_relative_pts_s": 1.8,
+              "source_pts_s": 41.44,
+              "image": "C05/frame_0057.jpg"
+            },
+            {
+              "cache_frame_index": 60,
+              "source_frame_index": 623,
+              "clip_relative_pts_s": 2.0,
+              "source_pts_s": 41.64,
+              "image": "C05/frame_0060.jpg"
+            },
+            {
+              "cache_frame_index": 84,
+              "source_frame_index": 647,
+              "clip_relative_pts_s": 3.6,
+              "source_pts_s": 43.24,
+              "image": "C05/frame_0084.jpg"
+            }
+          ]
+        },
+        {
+          "action": "whole_block_transfer",
+          "side": "right",
+          "quantity": 2,
+          "pickup_interval_s": [
+            3.0,
+            4.0
+          ],
+          "deposit_interval_s": [
+            4.2,
+            5.4
+          ],
+          "quantity_confidence": "high",
+          "note": "One block per hand carried from tray to filling tank.",
+          "event_id": "C05-E04",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "1fb299d9840871c710c9bcf718eea2d3f4032add39cc46dab96c29499422ea2e",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "inside_original_clip",
+          "original_clip_proposed_additions": 2,
+          "candidate_for_silver_training": true,
+          "carry_window_s": [
+            4.0,
+            4.2
+          ],
+          "evidence_frames": [
+            {
+              "cache_frame_index": 75,
+              "source_frame_index": 638,
+              "clip_relative_pts_s": 3.0,
+              "source_pts_s": 42.64,
+              "image": "C05/frame_0075.jpg"
+            },
+            {
+              "cache_frame_index": 90,
+              "source_frame_index": 653,
+              "clip_relative_pts_s": 4.0,
+              "source_pts_s": 43.64,
+              "image": "C05/frame_0090.jpg"
+            },
+            {
+              "cache_frame_index": 91,
+              "source_frame_index": 654,
+              "clip_relative_pts_s": 4.08,
+              "source_pts_s": 43.72,
+              "image": "C05/frame_0091.jpg"
+            },
+            {
+              "cache_frame_index": 111,
+              "source_frame_index": 674,
+              "clip_relative_pts_s": 5.4,
+              "source_pts_s": 45.04,
+              "image": "C05/frame_0111.jpg"
+            }
+          ]
+        },
+        {
+          "action": "arrange_existing_cheese",
+          "side": "left",
+          "interval_s": [
+            3.6,
+            6.6
+          ],
+          "quantity": 0,
+          "quantity_confidence": "high",
+          "note": "Repositions the blocks already deposited without another tray pickup.",
+          "event_id": "C05-E05",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "1fb299d9840871c710c9bcf718eea2d3f4032add39cc46dab96c29499422ea2e",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "non_transfer_or_unresolved",
+          "original_clip_proposed_additions": 0,
+          "candidate_for_silver_training": true,
+          "evidence_frames": [
+            {
+              "cache_frame_index": 84,
+              "source_frame_index": 647,
+              "clip_relative_pts_s": 3.6,
+              "source_pts_s": 43.24,
+              "image": "C05/frame_0084.jpg"
+            },
+            {
+              "cache_frame_index": 106,
+              "source_frame_index": 669,
+              "clip_relative_pts_s": 5.08,
+              "source_pts_s": 44.72,
+              "image": "C05/frame_0106.jpg"
+            },
+            {
+              "cache_frame_index": 129,
+              "source_frame_index": 692,
+              "clip_relative_pts_s": 6.6,
+              "source_pts_s": 46.24,
+              "image": "C05/frame_0129.jpg"
+            }
+          ]
+        },
+        {
+          "action": "whole_block_transfer",
+          "side": "right",
+          "quantity": 2,
+          "pickup_interval_s": [
+            6.4,
+            7.4
+          ],
+          "deposit_interval_s": [
+            7.8,
+            8.6
+          ],
+          "quantity_confidence": "high",
+          "note": "Two visible remaining tray blocks taken to the filling tank.",
+          "event_id": "C05-E06",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "1fb299d9840871c710c9bcf718eea2d3f4032add39cc46dab96c29499422ea2e",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "inside_original_clip",
+          "original_clip_proposed_additions": 2,
+          "candidate_for_silver_training": true,
+          "carry_window_s": [
+            7.4,
+            7.8
+          ],
+          "evidence_frames": [
+            {
+              "cache_frame_index": 126,
+              "source_frame_index": 689,
+              "clip_relative_pts_s": 6.4,
+              "source_pts_s": 46.04,
+              "image": "C05/frame_0126.jpg"
+            },
+            {
+              "cache_frame_index": 140,
+              "source_frame_index": 703,
+              "clip_relative_pts_s": 7.4,
+              "source_pts_s": 47.04,
+              "image": "C05/frame_0140.jpg"
+            },
+            {
+              "cache_frame_index": 143,
+              "source_frame_index": 706,
+              "clip_relative_pts_s": 7.6,
+              "source_pts_s": 47.24,
+              "image": "C05/frame_0143.jpg"
+            },
+            {
+              "cache_frame_index": 158,
+              "source_frame_index": 721,
+              "clip_relative_pts_s": 8.6,
+              "source_pts_s": 48.24,
+              "image": "C05/frame_0158.jpg"
+            }
+          ]
+        },
+        {
+          "action": "tray_reposition",
+          "side": "left",
+          "interval_s": [
+            7.2,
+            11.4
+          ],
+          "quantity": 0,
+          "quantity_confidence": "high",
+          "note": "Moves the emptied tray past the filling station.",
+          "event_id": "C05-E07",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "1fb299d9840871c710c9bcf718eea2d3f4032add39cc46dab96c29499422ea2e",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "non_transfer_or_unresolved",
+          "original_clip_proposed_additions": 0,
+          "candidate_for_silver_training": true,
+          "evidence_frames": [
+            {
+              "cache_frame_index": 137,
+              "source_frame_index": 700,
+              "clip_relative_pts_s": 7.2,
+              "source_pts_s": 46.84,
+              "image": "C05/frame_0137.jpg"
+            },
+            {
+              "cache_frame_index": 168,
+              "source_frame_index": 731,
+              "clip_relative_pts_s": 9.28,
+              "source_pts_s": 48.92,
+              "image": "C05/frame_0168.jpg"
+            },
+            {
+              "cache_frame_index": 200,
+              "source_frame_index": 763,
+              "clip_relative_pts_s": 11.4,
+              "source_pts_s": 51.04,
+              "image": "C05/frame_0200.jpg"
+            }
+          ]
+        },
+        {
+          "action": "salt_or_bucket_material",
+          "side": "right",
+          "interval_s": [
+            8.8,
+            12.2
+          ],
+          "quantity": 0,
+          "quantity_confidence": "high",
+          "note": "Turns to the white bucket, then sprinkles/spreads its contents over the layer; no whole-block pickup.",
+          "event_id": "C05-E08",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "1fb299d9840871c710c9bcf718eea2d3f4032add39cc46dab96c29499422ea2e",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "non_transfer_or_unresolved",
+          "original_clip_proposed_additions": 0,
+          "candidate_for_silver_training": true,
+          "evidence_frames": [
+            {
+              "cache_frame_index": 161,
+              "source_frame_index": 724,
+              "clip_relative_pts_s": 8.8,
+              "source_pts_s": 48.44,
+              "image": "C05/frame_0161.jpg"
+            },
+            {
+              "cache_frame_index": 186,
+              "source_frame_index": 749,
+              "clip_relative_pts_s": 10.48,
+              "source_pts_s": 50.12,
+              "image": "C05/frame_0186.jpg"
+            },
+            {
+              "cache_frame_index": 212,
+              "source_frame_index": 775,
+              "clip_relative_pts_s": 12.2,
+              "source_pts_s": 51.84,
+              "image": "C05/frame_0212.jpg"
+            }
+          ]
+        },
+        {
+          "action": "separator_sheet",
+          "side": "left",
+          "interval_s": [
+            14.0,
+            16.4
+          ],
+          "quantity": 0,
+          "quantity_confidence": "high",
+          "note": "Brings a large thin white separator sheet from the left and spreads it over the cheese layer.",
+          "event_id": "C05-E09",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "1fb299d9840871c710c9bcf718eea2d3f4032add39cc46dab96c29499422ea2e",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "non_transfer_or_unresolved",
+          "original_clip_proposed_additions": 0,
+          "candidate_for_silver_training": true,
+          "evidence_frames": [
+            {
+              "cache_frame_index": 239,
+              "source_frame_index": 802,
+              "clip_relative_pts_s": 14.0,
+              "source_pts_s": 53.64,
+              "image": "C05/frame_0239.jpg"
+            },
+            {
+              "cache_frame_index": 257,
+              "source_frame_index": 820,
+              "clip_relative_pts_s": 15.2,
+              "source_pts_s": 54.84,
+              "image": "C05/frame_0257.jpg"
+            },
+            {
+              "cache_frame_index": 275,
+              "source_frame_index": 838,
+              "clip_relative_pts_s": 16.4,
+              "source_pts_s": 56.04,
+              "image": "C05/frame_0275.jpg"
+            }
+          ]
+        },
+        {
+          "action": "whole_block_transfer",
+          "side": "right",
+          "quantity": 2,
+          "pickup_interval_s": [
+            15.0,
+            16.0
+          ],
+          "deposit_interval_s": [
+            16.4,
+            17.6
+          ],
+          "quantity_confidence": "high",
+          "note": "Two raised blocks, separately visible in the hands.",
+          "event_id": "C05-E10",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "1fb299d9840871c710c9bcf718eea2d3f4032add39cc46dab96c29499422ea2e",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "inside_original_clip",
+          "original_clip_proposed_additions": 2,
+          "candidate_for_silver_training": true,
+          "carry_window_s": [
+            16.0,
+            16.4
+          ],
+          "evidence_frames": [
+            {
+              "cache_frame_index": 254,
+              "source_frame_index": 817,
+              "clip_relative_pts_s": 15.0,
+              "source_pts_s": 54.64,
+              "image": "C05/frame_0254.jpg"
+            },
+            {
+              "cache_frame_index": 269,
+              "source_frame_index": 832,
+              "clip_relative_pts_s": 16.0,
+              "source_pts_s": 55.64,
+              "image": "C05/frame_0269.jpg"
+            },
+            {
+              "cache_frame_index": 272,
+              "source_frame_index": 835,
+              "clip_relative_pts_s": 16.2,
+              "source_pts_s": 55.84,
+              "image": "C05/frame_0272.jpg"
+            },
+            {
+              "cache_frame_index": 293,
+              "source_frame_index": 856,
+              "clip_relative_pts_s": 17.6,
+              "source_pts_s": 57.24,
+              "image": "C05/frame_0293.jpg"
+            }
+          ]
+        },
+        {
+          "action": "whole_block_transfer",
+          "side": "left",
+          "quantity": 2,
+          "pickup_interval_s": [
+            17.0,
+            17.6
+          ],
+          "deposit_interval_s": [
+            17.6,
+            18.4
+          ],
+          "quantity_confidence": "high",
+          "note": "Two blocks lifted together from the near end of the tray.",
+          "event_id": "C05-E11",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "1fb299d9840871c710c9bcf718eea2d3f4032add39cc46dab96c29499422ea2e",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "inside_original_clip",
+          "original_clip_proposed_additions": 2,
+          "candidate_for_silver_training": true,
+          "carry_window_s": [
+            17.6,
+            17.6
+          ],
+          "evidence_frames": [
+            {
+              "cache_frame_index": 284,
+              "source_frame_index": 847,
+              "clip_relative_pts_s": 17.0,
+              "source_pts_s": 56.64,
+              "image": "C05/frame_0284.jpg"
+            },
+            {
+              "cache_frame_index": 293,
+              "source_frame_index": 856,
+              "clip_relative_pts_s": 17.6,
+              "source_pts_s": 57.24,
+              "image": "C05/frame_0293.jpg"
+            },
+            {
+              "cache_frame_index": 293,
+              "source_frame_index": 856,
+              "clip_relative_pts_s": 17.6,
+              "source_pts_s": 57.24,
+              "image": "C05/frame_0293.jpg"
+            },
+            {
+              "cache_frame_index": 305,
+              "source_frame_index": 868,
+              "clip_relative_pts_s": 18.4,
+              "source_pts_s": 58.04,
+              "image": "C05/frame_0305.jpg"
+            }
+          ]
+        },
+        {
+          "action": "whole_block_transfer",
+          "side": "right",
+          "quantity": 2,
+          "pickup_interval_s": [
+            18.4,
+            19.2
+          ],
+          "deposit_interval_s": [
+            19.6,
+            20.4
+          ],
+          "quantity_confidence": "high",
+          "note": "Two visible blocks carried toward the tank.",
+          "event_id": "C05-E12",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "1fb299d9840871c710c9bcf718eea2d3f4032add39cc46dab96c29499422ea2e",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "inside_original_clip",
+          "original_clip_proposed_additions": 2,
+          "candidate_for_silver_training": true,
+          "carry_window_s": [
+            19.2,
+            19.6
+          ],
+          "evidence_frames": [
+            {
+              "cache_frame_index": 305,
+              "source_frame_index": 868,
+              "clip_relative_pts_s": 18.4,
+              "source_pts_s": 58.04,
+              "image": "C05/frame_0305.jpg"
+            },
+            {
+              "cache_frame_index": 317,
+              "source_frame_index": 880,
+              "clip_relative_pts_s": 19.2,
+              "source_pts_s": 58.84,
+              "image": "C05/frame_0317.jpg"
+            },
+            {
+              "cache_frame_index": 320,
+              "source_frame_index": 883,
+              "clip_relative_pts_s": 19.4,
+              "source_pts_s": 59.04,
+              "image": "C05/frame_0320.jpg"
+            },
+            {
+              "cache_frame_index": 335,
+              "source_frame_index": 898,
+              "clip_relative_pts_s": 20.4,
+              "source_pts_s": 60.04,
+              "image": "C05/frame_0335.jpg"
+            }
+          ]
+        },
+        {
+          "action": "whole_block_transfer",
+          "side": "left",
+          "quantity": 2,
+          "pickup_interval_s": [
+            19.0,
+            19.6
+          ],
+          "deposit_interval_s": [
+            19.8,
+            20.6
+          ],
+          "quantity_confidence": "high",
+          "note": "Two blocks lifted, carried and deposited.",
+          "event_id": "C05-E13",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "1fb299d9840871c710c9bcf718eea2d3f4032add39cc46dab96c29499422ea2e",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "inside_original_clip",
+          "original_clip_proposed_additions": 2,
+          "candidate_for_silver_training": true,
+          "carry_window_s": [
+            19.6,
+            19.8
+          ],
+          "evidence_frames": [
+            {
+              "cache_frame_index": 314,
+              "source_frame_index": 877,
+              "clip_relative_pts_s": 19.0,
+              "source_pts_s": 58.64,
+              "image": "C05/frame_0314.jpg"
+            },
+            {
+              "cache_frame_index": 323,
+              "source_frame_index": 886,
+              "clip_relative_pts_s": 19.6,
+              "source_pts_s": 59.24,
+              "image": "C05/frame_0323.jpg"
+            },
+            {
+              "cache_frame_index": 324,
+              "source_frame_index": 887,
+              "clip_relative_pts_s": 19.68,
+              "source_pts_s": 59.32,
+              "image": "C05/frame_0324.jpg"
+            },
+            {
+              "cache_frame_index": 338,
+              "source_frame_index": 901,
+              "clip_relative_pts_s": 20.6,
+              "source_pts_s": 60.24,
+              "image": "C05/frame_0338.jpg"
+            }
+          ]
+        },
+        {
+          "action": "whole_block_transfer",
+          "side": "left",
+          "quantity": 2,
+          "pickup_interval_s": [
+            21.2,
+            22.0
+          ],
+          "deposit_interval_s": [
+            22.2,
+            23.4
+          ],
+          "quantity_confidence": "high",
+          "note": "Two remaining blocks carried with separate hands.",
+          "event_id": "C05-E14",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "1fb299d9840871c710c9bcf718eea2d3f4032add39cc46dab96c29499422ea2e",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "inside_original_clip",
+          "original_clip_proposed_additions": 2,
+          "candidate_for_silver_training": true,
+          "carry_window_s": [
+            22.0,
+            22.2
+          ],
+          "evidence_frames": [
+            {
+              "cache_frame_index": 347,
+              "source_frame_index": 910,
+              "clip_relative_pts_s": 21.2,
+              "source_pts_s": 60.84,
+              "image": "C05/frame_0347.jpg"
+            },
+            {
+              "cache_frame_index": 359,
+              "source_frame_index": 922,
+              "clip_relative_pts_s": 22.0,
+              "source_pts_s": 61.64,
+              "image": "C05/frame_0359.jpg"
+            },
+            {
+              "cache_frame_index": 360,
+              "source_frame_index": 923,
+              "clip_relative_pts_s": 22.08,
+              "source_pts_s": 61.72,
+              "image": "C05/frame_0360.jpg"
+            },
+            {
+              "cache_frame_index": 380,
+              "source_frame_index": 943,
+              "clip_relative_pts_s": 23.4,
+              "source_pts_s": 63.04,
+              "image": "C05/frame_0380.jpg"
+            }
+          ]
+        },
+        {
+          "action": "empty_hand_or_residue_motion",
+          "side": "right",
+          "interval_s": [
+            22.0,
+            24.2
+          ],
+          "quantity": 0,
+          "quantity_confidence": "high",
+          "note": "Sweeps/touches the emptied tray; no raised whole block lifted.",
+          "event_id": "C05-E15",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "1fb299d9840871c710c9bcf718eea2d3f4032add39cc46dab96c29499422ea2e",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "non_transfer_or_unresolved",
+          "original_clip_proposed_additions": 0,
+          "candidate_for_silver_training": true,
+          "evidence_frames": [
+            {
+              "cache_frame_index": 359,
+              "source_frame_index": 922,
+              "clip_relative_pts_s": 22.0,
+              "source_pts_s": 61.64,
+              "image": "C05/frame_0359.jpg"
+            },
+            {
+              "cache_frame_index": 375,
+              "source_frame_index": 938,
+              "clip_relative_pts_s": 23.08,
+              "source_pts_s": 62.72,
+              "image": "C05/frame_0375.jpg"
+            },
+            {
+              "cache_frame_index": 392,
+              "source_frame_index": 955,
+              "clip_relative_pts_s": 24.2,
+              "source_pts_s": 63.84,
+              "image": "C05/frame_0392.jpg"
+            }
+          ]
+        },
+        {
+          "action": "tray_reposition",
+          "side": "right",
+          "interval_s": [
+            24.2,
+            26.0
+          ],
+          "quantity": 0,
+          "quantity_confidence": "high",
+          "note": "Pushes the emptied tray away.",
+          "event_id": "C05-E16",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "1fb299d9840871c710c9bcf718eea2d3f4032add39cc46dab96c29499422ea2e",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "non_transfer_or_unresolved",
+          "original_clip_proposed_additions": 0,
+          "candidate_for_silver_training": true,
+          "evidence_frames": [
+            {
+              "cache_frame_index": 392,
+              "source_frame_index": 955,
+              "clip_relative_pts_s": 24.2,
+              "source_pts_s": 63.84,
+              "image": "C05/frame_0392.jpg"
+            },
+            {
+              "cache_frame_index": 405,
+              "source_frame_index": 968,
+              "clip_relative_pts_s": 25.08,
+              "source_pts_s": 64.72,
+              "image": "C05/frame_0405.jpg"
+            },
+            {
+              "cache_frame_index": 419,
+              "source_frame_index": 982,
+              "clip_relative_pts_s": 26.0,
+              "source_pts_s": 65.64,
+              "image": "C05/frame_0419.jpg"
+            }
+          ]
+        },
+        {
+          "action": "empty_hand_motion",
+          "side": "left",
+          "interval_s": [
+            25.2,
+            29.9
+          ],
+          "quantity": 0,
+          "quantity_confidence": "high",
+          "note": "Repeated empty-hand gestures above the tank, no cheese pickup.",
+          "event_id": "C05-E17",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "1fb299d9840871c710c9bcf718eea2d3f4032add39cc46dab96c29499422ea2e",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "non_transfer_or_unresolved",
+          "original_clip_proposed_additions": 0,
+          "candidate_for_silver_training": true,
+          "evidence_frames": [
+            {
+              "cache_frame_index": 407,
+              "source_frame_index": 970,
+              "clip_relative_pts_s": 25.2,
+              "source_pts_s": 64.84,
+              "image": "C05/frame_0407.jpg"
+            },
+            {
+              "cache_frame_index": 441,
+              "source_frame_index": 1004,
+              "clip_relative_pts_s": 27.56,
+              "source_pts_s": 67.2,
+              "image": "C05/frame_0441.jpg"
+            },
+            {
+              "cache_frame_index": 476,
+              "source_frame_index": 1039,
+              "clip_relative_pts_s": 29.88,
+              "source_pts_s": 69.52,
+              "image": "C05/frame_0476.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "clip_id": "C06",
+      "source_sha256": "4db57f7a58b33186e6120ff62cbde4dc9d14df830eca7cd3ab231bd6f702f23d",
+      "source_file": "4db57f7a58b33186_Camera_11_DVR_20261021133856_20261021134703_2883849.mp4",
+      "original_first_source_pts_s": 224.79000000000002,
+      "original_end_relative_pts_s": 29.92,
+      "roi_xyxy": [
+        800,
+        720,
+        1440,
+        1080
+      ],
+      "native_cached_frames": 572,
+      "original_clip_proposed_addition_subtotal": 24,
+      "original_clip_proposed_total": null,
+      "unresolved_event_ids": [
+        "C06-E01"
+      ],
+      "whole_transfer_sequences": 13,
+      "negative_intervals": 6,
+      "events": [
+        {
+          "action": "whole_block_transfer",
+          "side": "left",
+          "quantity": 2,
+          "pickup_interval_s": [
+            -1.0,
+            -0.6
+          ],
+          "deposit_interval_s": [
+            -0.08,
+            0.2
+          ],
+          "quantity_confidence": "medium",
+          "note": "Deposit straddles the original clip start and is partly hidden by the arm/rim. Carry quantity is two; attribution of 0, 1 or 2 to the original clip remains unresolved.",
+          "event_id": "C06-E01",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "4db57f7a58b33186e6120ff62cbde4dc9d14df830eca7cd3ab231bd6f702f23d",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "boundary_ambiguous",
+          "original_clip_proposed_additions": null,
+          "candidate_for_silver_training": false,
+          "carry_window_s": [
+            -0.6,
+            -0.08
+          ],
+          "evidence_frames": [
+            {
+              "cache_frame_index": 15,
+              "source_frame_index": 3346,
+              "clip_relative_pts_s": -1.0,
+              "source_pts_s": 223.79,
+              "image": "C06/frame_0015.jpg"
+            },
+            {
+              "cache_frame_index": 21,
+              "source_frame_index": 3352,
+              "clip_relative_pts_s": -0.6,
+              "source_pts_s": 224.19,
+              "image": "C06/frame_0021.jpg"
+            },
+            {
+              "cache_frame_index": 25,
+              "source_frame_index": 3356,
+              "clip_relative_pts_s": -0.36,
+              "source_pts_s": 224.43,
+              "image": "C06/frame_0025.jpg"
+            },
+            {
+              "cache_frame_index": 33,
+              "source_frame_index": 3364,
+              "clip_relative_pts_s": 0.2,
+              "source_pts_s": 224.99,
+              "image": "C06/frame_0033.jpg"
+            }
+          ]
+        },
+        {
+          "action": "whole_block_transfer",
+          "side": "right",
+          "quantity": 2,
+          "pickup_interval_s": [
+            -0.08,
+            0.6
+          ],
+          "deposit_interval_s": [
+            1.0,
+            2.2
+          ],
+          "quantity_confidence": "high",
+          "note": "Two separate blocks are carried from the tray into the tank.",
+          "event_id": "C06-E02",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "4db57f7a58b33186e6120ff62cbde4dc9d14df830eca7cd3ab231bd6f702f23d",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "inside_original_clip",
+          "original_clip_proposed_additions": 2,
+          "candidate_for_silver_training": true,
+          "carry_window_s": [
+            0.6,
+            1.0
+          ],
+          "evidence_frames": [
+            {
+              "cache_frame_index": 29,
+              "source_frame_index": 3360,
+              "clip_relative_pts_s": -0.08,
+              "source_pts_s": 224.71,
+              "image": "C06/frame_0029.jpg"
+            },
+            {
+              "cache_frame_index": 38,
+              "source_frame_index": 3369,
+              "clip_relative_pts_s": 0.6,
+              "source_pts_s": 225.39,
+              "image": "C06/frame_0038.jpg"
+            },
+            {
+              "cache_frame_index": 41,
+              "source_frame_index": 3372,
+              "clip_relative_pts_s": 0.8,
+              "source_pts_s": 225.59,
+              "image": "C06/frame_0041.jpg"
+            },
+            {
+              "cache_frame_index": 62,
+              "source_frame_index": 3393,
+              "clip_relative_pts_s": 2.2,
+              "source_pts_s": 226.99,
+              "image": "C06/frame_0062.jpg"
+            }
+          ]
+        },
+        {
+          "action": "whole_block_transfer",
+          "side": "left",
+          "quantity": 2,
+          "pickup_interval_s": [
+            1.4,
+            2.0
+          ],
+          "deposit_interval_s": [
+            2.2,
+            3.0
+          ],
+          "quantity_confidence": "high",
+          "note": "Two raised remaining blocks lifted, one per hand.",
+          "event_id": "C06-E03",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "4db57f7a58b33186e6120ff62cbde4dc9d14df830eca7cd3ab231bd6f702f23d",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "inside_original_clip",
+          "original_clip_proposed_additions": 2,
+          "candidate_for_silver_training": true,
+          "carry_window_s": [
+            2.0,
+            2.2
+          ],
+          "evidence_frames": [
+            {
+              "cache_frame_index": 50,
+              "source_frame_index": 3381,
+              "clip_relative_pts_s": 1.4,
+              "source_pts_s": 226.19,
+              "image": "C06/frame_0050.jpg"
+            },
+            {
+              "cache_frame_index": 59,
+              "source_frame_index": 3390,
+              "clip_relative_pts_s": 2.0,
+              "source_pts_s": 226.79,
+              "image": "C06/frame_0059.jpg"
+            },
+            {
+              "cache_frame_index": 61,
+              "source_frame_index": 3392,
+              "clip_relative_pts_s": 2.12,
+              "source_pts_s": 226.91,
+              "image": "C06/frame_0061.jpg"
+            },
+            {
+              "cache_frame_index": 74,
+              "source_frame_index": 3405,
+              "clip_relative_pts_s": 3.0,
+              "source_pts_s": 227.79,
+              "image": "C06/frame_0074.jpg"
+            }
+          ]
+        },
+        {
+          "action": "tray_reposition",
+          "side": "right",
+          "interval_s": [
+            3.0,
+            5.2
+          ],
+          "quantity": 0,
+          "quantity_confidence": "high",
+          "note": "Moves the emptied tray away and positions the next loaded tray.",
+          "event_id": "C06-E04",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "4db57f7a58b33186e6120ff62cbde4dc9d14df830eca7cd3ab231bd6f702f23d",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "non_transfer_or_unresolved",
+          "original_clip_proposed_additions": 0,
+          "candidate_for_silver_training": true,
+          "evidence_frames": [
+            {
+              "cache_frame_index": 74,
+              "source_frame_index": 3405,
+              "clip_relative_pts_s": 3.0,
+              "source_pts_s": 227.79,
+              "image": "C06/frame_0074.jpg"
+            },
+            {
+              "cache_frame_index": 91,
+              "source_frame_index": 3422,
+              "clip_relative_pts_s": 4.12,
+              "source_pts_s": 228.91,
+              "image": "C06/frame_0091.jpg"
+            },
+            {
+              "cache_frame_index": 107,
+              "source_frame_index": 3438,
+              "clip_relative_pts_s": 5.2,
+              "source_pts_s": 229.99,
+              "image": "C06/frame_0107.jpg"
+            }
+          ]
+        },
+        {
+          "action": "whole_block_transfer",
+          "side": "left",
+          "quantity": 2,
+          "pickup_interval_s": [
+            5.4,
+            6.0
+          ],
+          "deposit_interval_s": [
+            6.4,
+            7.2
+          ],
+          "quantity_confidence": "high",
+          "note": "Two whole blocks lifted together.",
+          "event_id": "C06-E05",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "4db57f7a58b33186e6120ff62cbde4dc9d14df830eca7cd3ab231bd6f702f23d",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "inside_original_clip",
+          "original_clip_proposed_additions": 2,
+          "candidate_for_silver_training": true,
+          "carry_window_s": [
+            6.0,
+            6.4
+          ],
+          "evidence_frames": [
+            {
+              "cache_frame_index": 110,
+              "source_frame_index": 3441,
+              "clip_relative_pts_s": 5.4,
+              "source_pts_s": 230.19,
+              "image": "C06/frame_0110.jpg"
+            },
+            {
+              "cache_frame_index": 119,
+              "source_frame_index": 3450,
+              "clip_relative_pts_s": 6.0,
+              "source_pts_s": 230.79,
+              "image": "C06/frame_0119.jpg"
+            },
+            {
+              "cache_frame_index": 122,
+              "source_frame_index": 3453,
+              "clip_relative_pts_s": 6.2,
+              "source_pts_s": 230.99,
+              "image": "C06/frame_0122.jpg"
+            },
+            {
+              "cache_frame_index": 137,
+              "source_frame_index": 3468,
+              "clip_relative_pts_s": 7.2,
+              "source_pts_s": 231.99,
+              "image": "C06/frame_0137.jpg"
+            }
+          ]
+        },
+        {
+          "action": "whole_block_transfer",
+          "side": "right",
+          "quantity": 2,
+          "pickup_interval_s": [
+            5.8,
+            6.6
+          ],
+          "deposit_interval_s": [
+            6.8,
+            7.8
+          ],
+          "quantity_confidence": "high",
+          "note": "Two separate blocks, one per hand.",
+          "event_id": "C06-E06",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "4db57f7a58b33186e6120ff62cbde4dc9d14df830eca7cd3ab231bd6f702f23d",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "inside_original_clip",
+          "original_clip_proposed_additions": 2,
+          "candidate_for_silver_training": true,
+          "carry_window_s": [
+            6.6,
+            6.8
+          ],
+          "evidence_frames": [
+            {
+              "cache_frame_index": 116,
+              "source_frame_index": 3447,
+              "clip_relative_pts_s": 5.8,
+              "source_pts_s": 230.59,
+              "image": "C06/frame_0116.jpg"
+            },
+            {
+              "cache_frame_index": 128,
+              "source_frame_index": 3459,
+              "clip_relative_pts_s": 6.6,
+              "source_pts_s": 231.39,
+              "image": "C06/frame_0128.jpg"
+            },
+            {
+              "cache_frame_index": 130,
+              "source_frame_index": 3461,
+              "clip_relative_pts_s": 6.72,
+              "source_pts_s": 231.51,
+              "image": "C06/frame_0130.jpg"
+            },
+            {
+              "cache_frame_index": 146,
+              "source_frame_index": 3477,
+              "clip_relative_pts_s": 7.8,
+              "source_pts_s": 232.59,
+              "image": "C06/frame_0146.jpg"
+            }
+          ]
+        },
+        {
+          "action": "whole_block_transfer",
+          "side": "left",
+          "quantity": 2,
+          "pickup_interval_s": [
+            8.0,
+            8.6
+          ],
+          "deposit_interval_s": [
+            8.8,
+            9.6
+          ],
+          "quantity_confidence": "high",
+          "note": "Two raised blocks lifted from adjacent tray cells.",
+          "event_id": "C06-E07",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "4db57f7a58b33186e6120ff62cbde4dc9d14df830eca7cd3ab231bd6f702f23d",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "inside_original_clip",
+          "original_clip_proposed_additions": 2,
+          "candidate_for_silver_training": true,
+          "carry_window_s": [
+            8.6,
+            8.8
+          ],
+          "evidence_frames": [
+            {
+              "cache_frame_index": 149,
+              "source_frame_index": 3480,
+              "clip_relative_pts_s": 8.0,
+              "source_pts_s": 232.79,
+              "image": "C06/frame_0149.jpg"
+            },
+            {
+              "cache_frame_index": 158,
+              "source_frame_index": 3489,
+              "clip_relative_pts_s": 8.6,
+              "source_pts_s": 233.39,
+              "image": "C06/frame_0158.jpg"
+            },
+            {
+              "cache_frame_index": 160,
+              "source_frame_index": 3491,
+              "clip_relative_pts_s": 8.72,
+              "source_pts_s": 233.51,
+              "image": "C06/frame_0160.jpg"
+            },
+            {
+              "cache_frame_index": 173,
+              "source_frame_index": 3504,
+              "clip_relative_pts_s": 9.6,
+              "source_pts_s": 234.39,
+              "image": "C06/frame_0173.jpg"
+            }
+          ]
+        },
+        {
+          "action": "whole_block_transfer",
+          "side": "right",
+          "quantity": 2,
+          "pickup_interval_s": [
+            8.6,
+            9.4
+          ],
+          "deposit_interval_s": [
+            10.0,
+            10.8
+          ],
+          "quantity_confidence": "high",
+          "note": "Two separately visible blocks carried together.",
+          "event_id": "C06-E08",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "4db57f7a58b33186e6120ff62cbde4dc9d14df830eca7cd3ab231bd6f702f23d",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "inside_original_clip",
+          "original_clip_proposed_additions": 2,
+          "candidate_for_silver_training": true,
+          "carry_window_s": [
+            9.4,
+            10.0
+          ],
+          "evidence_frames": [
+            {
+              "cache_frame_index": 158,
+              "source_frame_index": 3489,
+              "clip_relative_pts_s": 8.6,
+              "source_pts_s": 233.39,
+              "image": "C06/frame_0158.jpg"
+            },
+            {
+              "cache_frame_index": 170,
+              "source_frame_index": 3501,
+              "clip_relative_pts_s": 9.4,
+              "source_pts_s": 234.19,
+              "image": "C06/frame_0170.jpg"
+            },
+            {
+              "cache_frame_index": 175,
+              "source_frame_index": 3506,
+              "clip_relative_pts_s": 9.72,
+              "source_pts_s": 234.51,
+              "image": "C06/frame_0175.jpg"
+            },
+            {
+              "cache_frame_index": 191,
+              "source_frame_index": 3522,
+              "clip_relative_pts_s": 10.8,
+              "source_pts_s": 235.59,
+              "image": "C06/frame_0191.jpg"
+            }
+          ]
+        },
+        {
+          "action": "whole_block_transfer",
+          "side": "left",
+          "quantity": 2,
+          "pickup_interval_s": [
+            11.0,
+            11.6
+          ],
+          "deposit_interval_s": [
+            12.0,
+            13.2
+          ],
+          "quantity_confidence": "high",
+          "note": "Two remaining blocks carried in separate hands.",
+          "event_id": "C06-E09",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "4db57f7a58b33186e6120ff62cbde4dc9d14df830eca7cd3ab231bd6f702f23d",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "inside_original_clip",
+          "original_clip_proposed_additions": 2,
+          "candidate_for_silver_training": true,
+          "carry_window_s": [
+            11.6,
+            12.0
+          ],
+          "evidence_frames": [
+            {
+              "cache_frame_index": 194,
+              "source_frame_index": 3525,
+              "clip_relative_pts_s": 11.0,
+              "source_pts_s": 235.79,
+              "image": "C06/frame_0194.jpg"
+            },
+            {
+              "cache_frame_index": 203,
+              "source_frame_index": 3534,
+              "clip_relative_pts_s": 11.6,
+              "source_pts_s": 236.39,
+              "image": "C06/frame_0203.jpg"
+            },
+            {
+              "cache_frame_index": 206,
+              "source_frame_index": 3537,
+              "clip_relative_pts_s": 11.8,
+              "source_pts_s": 236.59,
+              "image": "C06/frame_0206.jpg"
+            },
+            {
+              "cache_frame_index": 227,
+              "source_frame_index": 3558,
+              "clip_relative_pts_s": 13.2,
+              "source_pts_s": 237.99,
+              "image": "C06/frame_0227.jpg"
+            }
+          ]
+        },
+        {
+          "action": "tray_reposition",
+          "side": "right",
+          "interval_s": [
+            12.0,
+            14.8
+          ],
+          "quantity": 0,
+          "quantity_confidence": "high",
+          "note": "Pushes the empty tray away and brings in the loaded tray.",
+          "event_id": "C06-E10",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "4db57f7a58b33186e6120ff62cbde4dc9d14df830eca7cd3ab231bd6f702f23d",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "non_transfer_or_unresolved",
+          "original_clip_proposed_additions": 0,
+          "candidate_for_silver_training": true,
+          "evidence_frames": [
+            {
+              "cache_frame_index": 209,
+              "source_frame_index": 3540,
+              "clip_relative_pts_s": 12.0,
+              "source_pts_s": 236.79,
+              "image": "C06/frame_0209.jpg"
+            },
+            {
+              "cache_frame_index": 230,
+              "source_frame_index": 3561,
+              "clip_relative_pts_s": 13.4,
+              "source_pts_s": 238.19,
+              "image": "C06/frame_0230.jpg"
+            },
+            {
+              "cache_frame_index": 251,
+              "source_frame_index": 3582,
+              "clip_relative_pts_s": 14.8,
+              "source_pts_s": 239.59,
+              "image": "C06/frame_0251.jpg"
+            }
+          ]
+        },
+        {
+          "action": "arrange_existing_cheese",
+          "side": "left",
+          "interval_s": [
+            13.2,
+            14.8
+          ],
+          "quantity": 0,
+          "quantity_confidence": "high",
+          "note": "Repositions cheese already inside the tank.",
+          "event_id": "C06-E11",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "4db57f7a58b33186e6120ff62cbde4dc9d14df830eca7cd3ab231bd6f702f23d",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "non_transfer_or_unresolved",
+          "original_clip_proposed_additions": 0,
+          "candidate_for_silver_training": true,
+          "evidence_frames": [
+            {
+              "cache_frame_index": 227,
+              "source_frame_index": 3558,
+              "clip_relative_pts_s": 13.2,
+              "source_pts_s": 237.99,
+              "image": "C06/frame_0227.jpg"
+            },
+            {
+              "cache_frame_index": 239,
+              "source_frame_index": 3570,
+              "clip_relative_pts_s": 14.0,
+              "source_pts_s": 238.79,
+              "image": "C06/frame_0239.jpg"
+            },
+            {
+              "cache_frame_index": 251,
+              "source_frame_index": 3582,
+              "clip_relative_pts_s": 14.8,
+              "source_pts_s": 239.59,
+              "image": "C06/frame_0251.jpg"
+            }
+          ]
+        },
+        {
+          "action": "whole_block_transfer",
+          "side": "right",
+          "quantity": 2,
+          "pickup_interval_s": [
+            15.0,
+            16.0
+          ],
+          "deposit_interval_s": [
+            16.4,
+            17.8
+          ],
+          "quantity_confidence": "high",
+          "note": "Two clearly separate blocks, one per hand.",
+          "event_id": "C06-E12",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "4db57f7a58b33186e6120ff62cbde4dc9d14df830eca7cd3ab231bd6f702f23d",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "inside_original_clip",
+          "original_clip_proposed_additions": 2,
+          "candidate_for_silver_training": true,
+          "carry_window_s": [
+            16.0,
+            16.4
+          ],
+          "evidence_frames": [
+            {
+              "cache_frame_index": 254,
+              "source_frame_index": 3585,
+              "clip_relative_pts_s": 15.0,
+              "source_pts_s": 239.79,
+              "image": "C06/frame_0254.jpg"
+            },
+            {
+              "cache_frame_index": 269,
+              "source_frame_index": 3600,
+              "clip_relative_pts_s": 16.0,
+              "source_pts_s": 240.79,
+              "image": "C06/frame_0269.jpg"
+            },
+            {
+              "cache_frame_index": 272,
+              "source_frame_index": 3603,
+              "clip_relative_pts_s": 16.2,
+              "source_pts_s": 240.99,
+              "image": "C06/frame_0272.jpg"
+            },
+            {
+              "cache_frame_index": 296,
+              "source_frame_index": 3627,
+              "clip_relative_pts_s": 17.8,
+              "source_pts_s": 242.59,
+              "image": "C06/frame_0296.jpg"
+            }
+          ]
+        },
+        {
+          "action": "whole_block_transfer",
+          "side": "left",
+          "quantity": 2,
+          "pickup_interval_s": [
+            15.6,
+            16.2
+          ],
+          "deposit_interval_s": [
+            16.8,
+            18.0
+          ],
+          "quantity_confidence": "high",
+          "note": "Two blocks lifted together and lowered into the tank.",
+          "event_id": "C06-E13",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "4db57f7a58b33186e6120ff62cbde4dc9d14df830eca7cd3ab231bd6f702f23d",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "inside_original_clip",
+          "original_clip_proposed_additions": 2,
+          "candidate_for_silver_training": true,
+          "carry_window_s": [
+            16.2,
+            16.8
+          ],
+          "evidence_frames": [
+            {
+              "cache_frame_index": 263,
+              "source_frame_index": 3594,
+              "clip_relative_pts_s": 15.6,
+              "source_pts_s": 240.39,
+              "image": "C06/frame_0263.jpg"
+            },
+            {
+              "cache_frame_index": 272,
+              "source_frame_index": 3603,
+              "clip_relative_pts_s": 16.2,
+              "source_pts_s": 240.99,
+              "image": "C06/frame_0272.jpg"
+            },
+            {
+              "cache_frame_index": 277,
+              "source_frame_index": 3608,
+              "clip_relative_pts_s": 16.52,
+              "source_pts_s": 241.31,
+              "image": "C06/frame_0277.jpg"
+            },
+            {
+              "cache_frame_index": 299,
+              "source_frame_index": 3630,
+              "clip_relative_pts_s": 18.0,
+              "source_pts_s": 242.79,
+              "image": "C06/frame_0299.jpg"
+            }
+          ]
+        },
+        {
+          "action": "whole_block_transfer",
+          "side": "right",
+          "quantity": 2,
+          "pickup_interval_s": [
+            18.6,
+            19.6
+          ],
+          "deposit_interval_s": [
+            19.8,
+            20.6
+          ],
+          "quantity_confidence": "high",
+          "note": "Two separately held whole blocks deposited.",
+          "event_id": "C06-E14",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "4db57f7a58b33186e6120ff62cbde4dc9d14df830eca7cd3ab231bd6f702f23d",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "inside_original_clip",
+          "original_clip_proposed_additions": 2,
+          "candidate_for_silver_training": true,
+          "carry_window_s": [
+            19.6,
+            19.8
+          ],
+          "evidence_frames": [
+            {
+              "cache_frame_index": 308,
+              "source_frame_index": 3639,
+              "clip_relative_pts_s": 18.6,
+              "source_pts_s": 243.39,
+              "image": "C06/frame_0308.jpg"
+            },
+            {
+              "cache_frame_index": 323,
+              "source_frame_index": 3654,
+              "clip_relative_pts_s": 19.6,
+              "source_pts_s": 244.39,
+              "image": "C06/frame_0323.jpg"
+            },
+            {
+              "cache_frame_index": 325,
+              "source_frame_index": 3656,
+              "clip_relative_pts_s": 19.72,
+              "source_pts_s": 244.51,
+              "image": "C06/frame_0325.jpg"
+            },
+            {
+              "cache_frame_index": 337,
+              "source_frame_index": 3668,
+              "clip_relative_pts_s": 20.6,
+              "source_pts_s": 245.39,
+              "image": "C06/frame_0337.jpg"
+            }
+          ]
+        },
+        {
+          "action": "whole_block_transfer",
+          "side": "left",
+          "quantity": 2,
+          "pickup_interval_s": [
+            19.0,
+            19.6
+          ],
+          "deposit_interval_s": [
+            19.8,
+            20.8
+          ],
+          "quantity_confidence": "high",
+          "note": "Two blocks lifted together, then lowered into the tank.",
+          "event_id": "C06-E15",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "4db57f7a58b33186e6120ff62cbde4dc9d14df830eca7cd3ab231bd6f702f23d",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "inside_original_clip",
+          "original_clip_proposed_additions": 2,
+          "candidate_for_silver_training": true,
+          "carry_window_s": [
+            19.6,
+            19.8
+          ],
+          "evidence_frames": [
+            {
+              "cache_frame_index": 314,
+              "source_frame_index": 3645,
+              "clip_relative_pts_s": 19.0,
+              "source_pts_s": 243.79,
+              "image": "C06/frame_0314.jpg"
+            },
+            {
+              "cache_frame_index": 323,
+              "source_frame_index": 3654,
+              "clip_relative_pts_s": 19.6,
+              "source_pts_s": 244.39,
+              "image": "C06/frame_0323.jpg"
+            },
+            {
+              "cache_frame_index": 325,
+              "source_frame_index": 3656,
+              "clip_relative_pts_s": 19.72,
+              "source_pts_s": 244.51,
+              "image": "C06/frame_0325.jpg"
+            },
+            {
+              "cache_frame_index": 340,
+              "source_frame_index": 3671,
+              "clip_relative_pts_s": 20.8,
+              "source_pts_s": 245.59,
+              "image": "C06/frame_0340.jpg"
+            }
+          ]
+        },
+        {
+          "action": "whole_block_transfer",
+          "side": "left",
+          "quantity": 2,
+          "pickup_interval_s": [
+            21.4,
+            22.0
+          ],
+          "deposit_interval_s": [
+            22.4,
+            23.4
+          ],
+          "quantity_confidence": "high",
+          "note": "Two remaining blocks deposited while the opposite side obtains salt.",
+          "event_id": "C06-E16",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "4db57f7a58b33186e6120ff62cbde4dc9d14df830eca7cd3ab231bd6f702f23d",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "inside_original_clip",
+          "original_clip_proposed_additions": 2,
+          "candidate_for_silver_training": true,
+          "carry_window_s": [
+            22.0,
+            22.4
+          ],
+          "evidence_frames": [
+            {
+              "cache_frame_index": 349,
+              "source_frame_index": 3680,
+              "clip_relative_pts_s": 21.4,
+              "source_pts_s": 246.19,
+              "image": "C06/frame_0349.jpg"
+            },
+            {
+              "cache_frame_index": 358,
+              "source_frame_index": 3689,
+              "clip_relative_pts_s": 22.0,
+              "source_pts_s": 246.79,
+              "image": "C06/frame_0358.jpg"
+            },
+            {
+              "cache_frame_index": 361,
+              "source_frame_index": 3692,
+              "clip_relative_pts_s": 22.2,
+              "source_pts_s": 246.99,
+              "image": "C06/frame_0361.jpg"
+            },
+            {
+              "cache_frame_index": 379,
+              "source_frame_index": 3710,
+              "clip_relative_pts_s": 23.4,
+              "source_pts_s": 248.19,
+              "image": "C06/frame_0379.jpg"
+            }
+          ]
+        },
+        {
+          "action": "salt_or_bucket_material",
+          "side": "right",
+          "interval_s": [
+            21.0,
+            24.0
+          ],
+          "quantity": 0,
+          "quantity_confidence": "high",
+          "note": "Takes material from the white bucket and scatters it across the layer, with no whole-block pickup.",
+          "event_id": "C06-E17",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "4db57f7a58b33186e6120ff62cbde4dc9d14df830eca7cd3ab231bd6f702f23d",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "non_transfer_or_unresolved",
+          "original_clip_proposed_additions": 0,
+          "candidate_for_silver_training": true,
+          "evidence_frames": [
+            {
+              "cache_frame_index": 343,
+              "source_frame_index": 3674,
+              "clip_relative_pts_s": 21.0,
+              "source_pts_s": 245.79,
+              "image": "C06/frame_0343.jpg"
+            },
+            {
+              "cache_frame_index": 366,
+              "source_frame_index": 3697,
+              "clip_relative_pts_s": 22.52,
+              "source_pts_s": 247.31,
+              "image": "C06/frame_0366.jpg"
+            },
+            {
+              "cache_frame_index": 388,
+              "source_frame_index": 3719,
+              "clip_relative_pts_s": 24.0,
+              "source_pts_s": 248.79,
+              "image": "C06/frame_0388.jpg"
+            }
+          ]
+        },
+        {
+          "action": "tray_and_residue_handling",
+          "side": "right",
+          "interval_s": [
+            24.6,
+            29.9
+          ],
+          "quantity": 0,
+          "quantity_confidence": "high",
+          "note": "Moves/scrapes the emptied tray and turns toward the scrap tank; no filling-tank whole-block transfer.",
+          "event_id": "C06-E18",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "4db57f7a58b33186e6120ff62cbde4dc9d14df830eca7cd3ab231bd6f702f23d",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "non_transfer_or_unresolved",
+          "original_clip_proposed_additions": 0,
+          "candidate_for_silver_training": true,
+          "evidence_frames": [
+            {
+              "cache_frame_index": 397,
+              "source_frame_index": 3728,
+              "clip_relative_pts_s": 24.6,
+              "source_pts_s": 249.39,
+              "image": "C06/frame_0397.jpg"
+            },
+            {
+              "cache_frame_index": 437,
+              "source_frame_index": 3768,
+              "clip_relative_pts_s": 27.24,
+              "source_pts_s": 252.03,
+              "image": "C06/frame_0437.jpg"
+            },
+            {
+              "cache_frame_index": 477,
+              "source_frame_index": 3808,
+              "clip_relative_pts_s": 29.92,
+              "source_pts_s": 254.71,
+              "image": "C06/frame_0477.jpg"
+            }
+          ]
+        },
+        {
+          "action": "separator_sheet",
+          "side": "left",
+          "interval_s": [
+            26.8,
+            29.9
+          ],
+          "quantity": 0,
+          "quantity_confidence": "high",
+          "note": "Brings a large white sheet from off-screen left and lays it over the layer.",
+          "event_id": "C06-E19",
+          "review_status": "assistant_proposal",
+          "evaluation_eligible": false,
+          "source_sha256": "4db57f7a58b33186e6120ff62cbde4dc9d14df830eca7cd3ab231bd6f702f23d",
+          "actor_reference": "image_side_only",
+          "original_clip_attribution": "non_transfer_or_unresolved",
+          "original_clip_proposed_additions": 0,
+          "candidate_for_silver_training": true,
+          "evidence_frames": [
+            {
+              "cache_frame_index": 430,
+              "source_frame_index": 3761,
+              "clip_relative_pts_s": 26.8,
+              "source_pts_s": 251.59,
+              "image": "C06/frame_0430.jpg"
+            },
+            {
+              "cache_frame_index": 453,
+              "source_frame_index": 3784,
+              "clip_relative_pts_s": 28.32,
+              "source_pts_s": 253.11,
+              "image": "C06/frame_0453.jpg"
+            },
+            {
+              "cache_frame_index": 477,
+              "source_frame_index": 3808,
+              "clip_relative_pts_s": 29.92,
+              "source_pts_s": 254.71,
+              "image": "C06/frame_0477.jpg"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "object_anchors": [
+    {
+      "clip_id": "C03",
+      "event_id": "C03-E10",
+      "side": "right",
+      "frame": {
+        "cache_frame_index": 377,
+        "source_frame_index": 5870,
+        "clip_relative_pts_s": 23.2,
+        "source_pts_s": 392.587,
+        "image": "C03/frame_0377.jpg"
+      },
+      "class_name": "carried_whole_feta_block",
+      "bbox_format": "xyxy",
+      "bbox_coordinates": "native_640x360_ROI",
+      "boxes": [
+        [
+          231,
+          119,
+          285,
+          149
+        ]
+      ],
+      "annotation_status": "assistant_authored_approximate_visible_extent",
+      "dense_track": false,
+      "occluded_extent_inferred": false,
+      "note": "Sparse evidence anchors only; not a fully annotated detector dataset. Do not treat unlabelled tray/tank cheese as detector background."
+    },
+    {
+      "clip_id": "C04",
+      "event_id": "C04-E12",
+      "side": "right",
+      "frame": {
+        "cache_frame_index": 344,
+        "source_frame_index": 1191,
+        "clip_relative_pts_s": 21.0,
+        "source_pts_s": 79.588,
+        "image": "C04/frame_0344.jpg"
+      },
+      "class_name": "carried_whole_feta_block",
+      "bbox_format": "xyxy",
+      "bbox_coordinates": "native_640x360_ROI",
+      "boxes": [
+        [
+          233,
+          143,
+          290,
+          175
+        ],
+        [
+          309,
+          159,
+          345,
+          202
+        ]
+      ],
+      "annotation_status": "assistant_authored_approximate_visible_extent",
+      "dense_track": false,
+      "occluded_extent_inferred": false,
+      "note": "Sparse evidence anchors only; not a fully annotated detector dataset. Do not treat unlabelled tray/tank cheese as detector background."
+    },
+    {
+      "clip_id": "C05",
+      "event_id": "C05-E10",
+      "side": "right",
+      "frame": {
+        "cache_frame_index": 269,
+        "source_frame_index": 832,
+        "clip_relative_pts_s": 16.0,
+        "source_pts_s": 55.64,
+        "image": "C05/frame_0269.jpg"
+      },
+      "class_name": "carried_whole_feta_block",
+      "bbox_format": "xyxy",
+      "bbox_coordinates": "native_640x360_ROI",
+      "boxes": [
+        [
+          271,
+          159,
+          316,
+          197
+        ],
+        [
+          335,
+          166,
+          378,
+          220
+        ]
+      ],
+      "annotation_status": "assistant_authored_approximate_visible_extent",
+      "dense_track": false,
+      "occluded_extent_inferred": false,
+      "note": "Sparse evidence anchors only; not a fully annotated detector dataset. Do not treat unlabelled tray/tank cheese as detector background."
+    },
+    {
+      "clip_id": "C06",
+      "event_id": "C06-E12",
+      "side": "right",
+      "frame": {
+        "cache_frame_index": 269,
+        "source_frame_index": 3600,
+        "clip_relative_pts_s": 16.0,
+        "source_pts_s": 240.79,
+        "image": "C06/frame_0269.jpg"
+      },
+      "class_name": "carried_whole_feta_block",
+      "bbox_format": "xyxy",
+      "bbox_coordinates": "native_640x360_ROI",
+      "boxes": [
+        [
+          251,
+          149,
+          308,
+          178
+        ],
+        [
+          311,
+          167,
+          350,
+          211
+        ]
+      ],
+      "annotation_status": "assistant_authored_approximate_visible_extent",
+      "dense_track": false,
+      "occluded_extent_inferred": false,
+      "note": "Sparse evidence anchors only; not a fully annotated detector dataset. Do not treat unlabelled tray/tank cheese as detector background."
+    }
+  ],
+  "summary": {
+    "clips": 4,
+    "transfer_sequences": 41,
+    "negative_intervals": 24,
+    "unresolved_cases": 2,
+    "sparse_object_boxes": 7,
+    "model_accuracy": null
+  }
+}

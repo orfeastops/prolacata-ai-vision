@@ -12,7 +12,7 @@
     2,
     5
   ],
-  "next_task": "Read CLAUDE_HANDOFF.md; use C01/C02 expert anchors for autonomous visual annotation; review the C02 action/quantity conflict and cut-off transfer from source video without presuming counts.",
+  "next_task": "Read the October 28 visual annotation update; use expert C01/C02 anchors and assistant C03-C06 proposals with uncertainty masks for richer object/temporal supervision. Preserve source-grouped evaluation and demonstrate held-out count improvements before live deployment.",
   "annotation_batch": [
     {
       "clip_id": "C01",
@@ -32,25 +32,33 @@
       "clip_id": "C03",
       "date": "2026-10-01",
       "source_sha256": "4f0cff8e3ea04eca7c722d6a5e50da1ef36b5fc9b6eba41d82709a61ccdf1154",
-      "expert_review_complete": false
+      "expert_review_complete": false,
+      "assistant_visual_review_status": "first_pass_complete_with_explicit_uncertainty",
+      "assistant_annotation_file": "ASSISTANT_VISUAL_ANNOTATIONS_V4.json"
     },
     {
       "clip_id": "C04",
       "date": "2026-10-21",
       "source_sha256": "1038124164c6533f084b98433a9cdef4241010df38a41716164900088f3068ce",
-      "expert_review_complete": false
+      "expert_review_complete": false,
+      "assistant_visual_review_status": "first_pass_complete_with_explicit_uncertainty",
+      "assistant_annotation_file": "ASSISTANT_VISUAL_ANNOTATIONS_V4.json"
     },
     {
       "clip_id": "C05",
       "date": "2026-10-21",
       "source_sha256": "1fb299d9840871c710c9bcf718eea2d3f4032add39cc46dab96c29499422ea2e",
-      "expert_review_complete": false
+      "expert_review_complete": false,
+      "assistant_visual_review_status": "first_pass_complete_with_explicit_uncertainty",
+      "assistant_annotation_file": "ASSISTANT_VISUAL_ANNOTATIONS_V4.json"
     },
     {
       "clip_id": "C06",
       "date": "2026-10-21",
       "source_sha256": "4db57f7a58b33186e6120ff62cbde4dc9d14df830eca7cd3ab231bd6f702f23d",
-      "expert_review_complete": false
+      "expert_review_complete": false,
+      "assistant_visual_review_status": "first_pass_complete_with_explicit_uncertainty",
+      "assistant_annotation_file": "ASSISTANT_VISUAL_ANNOTATIONS_V4.json"
     }
   ],
   "no_active_training_job_started_for_v4": true,
@@ -89,5 +97,16 @@
     "boundary_censored_carried_quantity": 2,
     "raw_quantity_action_conflicts": 1,
     "independently_confirmed_whole_clip_total": null
-  }
+  },
+  "latest_annotation_update": "2026-10-28",
+  "assistant_visual_annotation_batch_v4": {
+    "clips": 4,
+    "transfer_sequences": 41,
+    "negative_intervals": 24,
+    "unresolved_cases": 2,
+    "sparse_object_boxes": 7,
+    "model_accuracy": null,
+    "file": "ASSISTANT_VISUAL_ANNOTATIONS_V4.json"
+  },
+  "C02_boundary_assistant_supplement": "outputs/facility_dataset/temporal_pipeline/sequence_annotation_v4/assistant_visual_review/C02_boundary_supplement.json"
 }

@@ -2,6 +2,10 @@
 
 The owner requested this GitHub handoff specifically to continue with Claude. Preserve the current work, inspect the actual camera footage yourself, and prioritize measurable progress over repeated planning or asking the owner to label every movement.
 
+## Update: 28 October 2026
+
+Read [ASSISTANT_VISUAL_REVIEW_20261028.md](ASSISTANT_VISUAL_REVIEW_20261028.md) and [ASSISTANT_VISUAL_ANNOTATIONS_V4.json](ASSISTANT_VISUAL_ANNOTATIONS_V4.json) before continuing. The assistant has now visually annotated C03-C06: 41 transfer sequences including context, 24 negative intervals, two unresolved cases, and seven sparse carried-block boxes. The small update ZIP preserves the scripts, labels and review page; private evidence media can be regenerated. These are assistant-authored proposals, not new model results or human ground truth. C02 boundary context was also inspected without modifying the human form export.
+
 ## Prompt to start the next session
 
 > Continue the feta production vision project in this repository. First read CLAUDE_HANDOFF.md, START_HERE.md, CURRENT_STATE.json, EXPERIMENT_HISTORY.md, ANNOTATION_PROTOCOL.md and DATA_AND_REPRODUCIBILITY.md. Inspect the existing code, checkpoints and numerical failures before selecting a method. The goal is actual whole-block additions per tank and timestamps, followed by tank movement from camera 11 to camera 15. Do not assume fixed quantities per gesture, tray or tank. Extract sequential source frames and short contextual videos yourself, inspect visible cheese during pickup/carry/release, and create draft object/group and temporal labels. Use the saved expert C01/C02 labels as anchors. Ask me only about genuinely unresolved visual/domain ambiguity; do not make me narrate every frame. Distinguish your draft annotations from human-confirmed ground truth and from model predictions. Keep complete source videos grouped in evaluation splits; keep September 26 out of training and October 3 reserved. Demonstrate count accuracy on excluded sources before another full-day run or live deployment. Do not present hand-motion boxes, model-training completion, or fitted training counts as validated production counting. Continue from the preserved artifacts rather than starting over.
@@ -21,7 +25,7 @@ The **root** `CURRENT_STATE.json`, `EXPERT_FEEDBACK_C01.json`, `EXPERT_FEEDBACK_
 - C01: ten form entries. Eight completed transfers describe 18 blocks within the original clip. The final left-side two-block carry starts at 28.20 seconds and releases at 30.74 and 33.30, both after the original 29.96-second boundary. Three carries explicitly contain three blocks each. A valid drop can occur from above without deep bending. No separately confirmed exhaustive clip total was supplied.
 - C02: fourteen form entries. Seven completed positive transfers describe 14 blocks. Six entries describe no-new-block adjustment, tray movement or crumb disposal. A final two-block carry is cut off before its release is visible.
 - One C02 entry contains raw quantity `18` while its action and note explicitly describe rearranging cheese already inside the tank. Preserve this inconsistency and inspect the source; do not treat `18` as either a newly deposited quantity or an independently confirmed clip total. The semantic increment for rearrangement is zero, but that conflicting entry is not automatically training-eligible.
-- C03–C06 have prepared videos and timestamps but no returned expert form labels. The assistant should make the first visual annotation pass itself. Do not infer zero activity from a missing form row.
+- C03–C06 have assistant visual proposals in the October 28 update, with two unresolved cases. They still have no returned expert form labels. Preserve the distinction between assistant proposals and expert-confirmed truth; do not infer zero activity from a missing form row.
 
 ## What the next method must improve
 
