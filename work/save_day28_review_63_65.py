@@ -1,0 +1,16 @@
+from pathlib import Path
+import json,hashlib
+from datetime import datetime,timezone
+b=Path('outputs/tank_transfer_training_v1/dataset_v2/heldout_counting');r=b/'day28_runs';now=datetime.now(timezone.utc).isoformat()
+def read(p):return json.loads(p.read_text())
+def save(p,q):p.write_text(json.dumps(q,indent=2))
+for idx,n in [(63,7),(65,6)]:
+ d=r/f'clip_{idx:03}';sha=hashlib.file_digest((d/'source.mp4').open('rb'),'sha256').hexdigest();assert sha==read(d/'source.json')['sha256']
+ save(d/'source_hash_review.json',dict(checked_at=now,sha256=sha,matches_recorded=True,exact_duplicates_in_recorded_sources=[p.parent.name for p in r.glob('clip_*/source.json') if p.parent!=d and read(p).get('sha256')==sha]))
+ q=read(d/'review_queue.json');q.update(review_status='sampled_visual_review_complete',reviewed_at=now,reviewed_raw_samples=n,sampling_s=10,manual_reference_exhaustive=False,confirmed_loaded_count=int(idx==65),manual_observed_loaded_departures=int(idx==65),aggregation_allowed=False,evidence=['raw_review_10s/sheet_00.jpg'])
+ if idx==63:q['review_notes']='Stationary foreground white-block loading10:04:55-10:05:58. No departure observed in seven samples; matches zero proposals. Boundaries with fullclip and064 unresolved.'
+ else:q.update(reviewed_dense_samples=28,dense_sampling_s=2,review_notes='One loaded departure matched. No additional departure seen in sampled reference. Boundaries064-065-066 still require reconciliation before aggregation.',event_reviews=[dict(id=1,track=10,pts_s=42.72,visible_clock='10:18:04',decision='visually_confirmed_loaded_departure',content_basis='Visible white blocks and loading10:17:23-47; cover10:17:49-53; pickup10:17:55 and sampled continuous travel to doorway10:18:03-07.',overlay_reviewed=True,fullness_fraction=None,weight_kg=None,evidence=[f'raw_review_2s/sheet_{i:02}.jpg' for i in range(4)]+['event_001.jpg'])])
+ save(d/'review_queue.json',q)
+p=r/'manual_review_progress.json';q=read(p);q.update(reviewed_clips=[f'clip_{i:03}' for i in list(range(62))+[63,65]],reviewed_raw_samples=967,reviewed_dense_samples=472,observed_loaded_departures=13,updated_at=now,note='64 clips sampled in additional queue:000-061,063,065. Index062 is excluded pre-reviewed fullclip, not a missing inference. Clip064 remains visually unreviewed.13 loaded departures;daily total unset.');save(p,q)
+p=b/'review.html';h=p.read_text(encoding='utf-8').replace('62 αποσπάσματα: 954 αραιά δείγματα και 444 πυκνότερα δείγματα','64 αποσπάσματα: 967 αραιά δείγματα και 472 πυκνότερα δείγματα').replace('Δώδεκα φορτωμένες έξοδοι επιβεβαιώθηκαν στην πρόσθετη ουρά:','Δεκατρείς φορτωμένες έξοδοι επιβεβαιώθηκαν στην πρόσθετη ουρά:');h=h.replace('<a href="day28_runs/manual_review_progress.json">','<p>Clip063: 7 δείγματα φόρτωσης χωρίς έξοδο. Clip065: 6 αραιά και 28 πυκνά δείγματα, overlay, μία φορτωμένη έξοδος10:18:04. Εκκρεμούν όρια και clip064. Το index062 αντιστοιχεί στο ήδη ελεγμένο fullclip και δεν προστέθηκε ξανά. Ημερήσιο σύνολο δεν έχει οριστικοποιηθεί.</p><a href="day28_runs/clip_065/review_queue.json">Τεκμηρίωση clip065</a><a href="day28_runs/manual_review_progress.json">');p.write_text(h,encoding='utf-8')
+print('Saved64 reviewed clips,967 coarse,472 dense,13 loaded;daily unset.')

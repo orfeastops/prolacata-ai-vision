@@ -1,0 +1,20 @@
+from pathlib import Path
+import json, hashlib
+from datetime import datetime, timezone
+b=Path('outputs/tank_transfer_training_v1/dataset_v2/heldout_counting'); r=b/'day28_runs'; now=datetime.now(timezone.utc).isoformat()
+for idx,n,nd,folder,clock in [(52,45,36,'raw_review_2s_55_125','08:45:19'),(53,30,35,'raw_review_2s_75_145','08:53:00'),(54,2,0,None,None)]:
+ d=r/f'clip_{idx:03}'; p=d/'review_queue.json'; q=json.loads(p.read_text())
+ q.update(review_status='sampled_visual_review_complete',confirmed_loaded_count=int(idx!=54),manual_observed_loaded_departures=int(idx!=54),reviewed_raw_samples=n,sampling_s=10,reviewed_dense_samples=nd,manual_reference_exhaustive=False,reviewed_at=now,aggregation_allowed=False,evidence=[str(s.relative_to(d)).replace('\\','/') for s in sorted((d/'raw_review_10s').glob('sheet*.jpg'))])
+ if folder:
+  event=q['automatic_proposals'][0]
+  q.update(dense_sampling_s=2,event_reviews=[dict(id=event['id'],track=event['track'],pts_s=event['pts_s'],visible_clock=clock,decision='visually_confirmed_loaded_departure',content_basis='Visible white blocks loaded into foreground tank, then covering, pickup and sampled continuous transport through doorway. Empty replacement tank is separate. Later outside-door appearance is not a new departure.',fullness_fraction=None,weight_kg=None,overlay_reviewed=True,evidence=['event_001.jpg']+[f'{folder}/sheet_{i:02}.jpg' for i in range(4)])],review_notes='One loaded departure confirmed in dense samples and overlay. No additional departure observed in coarse samples. Sampled reference is not exhaustive; boundaries remain pending.')
+ else:
+  q['review_notes']='Two raw samples show stationary foreground loading, no observed departure. Visible clock jumps from 08:55:44 to 08:56:03 between initial samples; do not infer continuous coverage.'
+ p.write_text(json.dumps(q,indent=2),encoding='utf-8')
+ actual=hashlib.file_digest((d/'source.mp4').open('rb'),'sha256').hexdigest(); expected=json.loads((d/'source.json').read_text())['sha256']; assert actual==expected
+ duplicates=[s.parent.name for s in r.glob('clip_*/source.json') if s.parent!=d and json.loads(s.read_text())['sha256']==actual]
+ (d/'source_hash_review.json').write_text(json.dumps(dict(sha256=actual,matches_recorded=True,exact_duplicate_clips=duplicates,reviewed_at=now),indent=2))
+p=r/'manual_review_progress.json';q=json.loads(p.read_text());q.update(reviewed_clips=[f'clip_{i:03}' for i in range(55)],reviewed_raw_samples=663,reviewed_dense_samples=255,observed_loaded_departures=7,updated_at=now,note='55 clips sampled; seven loaded departures observed across clip043,048,049,050,052,053. One person false positive clip007. Daily total unset; boundary and gap reconciliation incomplete.');p.write_text(json.dumps(q,indent=2),encoding='utf-8')
+p=b/'review.html';h=p.read_text(encoding='utf-8').replace('52 αποσπάσματα: 586 αραιά δείγματα και 184 πυκνότερα δείγματα','55 αποσπάσματα: 663 αραιά δείγματα και 255 πυκνότερα δείγματα').replace('Πέντε φορτωμένες έξοδοι επιβεβαιώθηκαν στην πρόσθετη ουρά: clip043 στις 08:04:02, clip048 στις 08:15:00, clip049 στις 08:22:25 και clip050 στις 08:30:24 και 08:37:57','Επτά φορτωμένες έξοδοι επιβεβαιώθηκαν στην πρόσθετη ουρά: clip043 στις 08:04:02, clip048 στις 08:15:00, clip049 στις 08:22:25, clip050 στις 08:30:24 και 08:37:57, clip052 στις 08:45:19 και clip053 στις 08:53:00')
+h=h.replace('<a href="day28_runs/manual_review_progress.json">','<p>Clip052–054: εξετάστηκαν 77 αραιά και 71 πυκνά δείγματα. Δύο φορτωμένες έξοδοι επιβεβαιώθηκαν με έλεγχο overlays. Οι μετρητές δειγμάτων ενδέχεται να επικαλύπτονται. Δεν υπάρχει ακόμη συνολικό ημερήσιο πλήθος.</p><a href="day28_runs/clip_052/review_queue.json">Τεκμηρίωση clip052</a><img src="day28_runs/clip_052/raw_review_2s_55_125/sheet_02.jpg"><a href="day28_runs/clip_053/review_queue.json">Τεκμηρίωση clip053</a><img src="day28_runs/clip_053/raw_review_2s_75_145/sheet_02.jpg"><a href="day28_runs/manual_review_progress.json">');p.write_text(h,encoding='utf-8')
+print('Saved 55 reviewed clips,663 coarse,255 dense,7 observed loaded departures; daily count remains null.')

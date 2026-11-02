@@ -1,0 +1,15 @@
+from pathlib import Path
+import json,hashlib
+from datetime import datetime,timezone
+b=Path('outputs/tank_transfer_training_v1/dataset_v2/heldout_counting');r=b/'day28_runs';d=r/'clip_077';now=datetime.now(timezone.utc).isoformat()
+def read(p):return json.loads(p.read_text())
+def save(p,q):p.write_text(json.dumps(q,indent=2))
+with (d/'source.mp4').open('rb') as f:sha=hashlib.file_digest(f,'sha256').hexdigest()
+assert sha==read(d/'source.json')['sha256']
+save(d/'source_hash_review.json',dict(checked_at=now,sha256=sha,matches_recorded=True,exact_duplicates_in_recorded_sources=[p.parent.name for p in r.glob('clip_*/source.json') if p.parent!=d and read(p).get('sha256')==sha]))
+q=read(d/'review_queue.json');assert not q['automatic_proposals'];q.update(review_status='sampled_visual_review_complete',reviewed_at=now,reviewed_raw_samples=23,reviewed_dense_samples=0,sampling_s=10,manual_reference_exhaustive=False,confirmed_loaded_count=0,manual_observed_loaded_departures=0,aggregation_allowed=False,evidence=[f'raw_review_10s/sheet_{j:02}.jpg' for j in range(3)],review_notes='Foreground tank receives visible white blocks throughout sampled sequence10:40:51-10:44:36. No tank departure observed; zero proposals compared to sampled raw reference, not exhaustive. Outside-door appearances not counted. Loading-to-next-departure link awaits078 review.');save(d/'review_queue.json',q)
+p=r/'boundary_76_77/evidence.json';q=read(p);q.update(visual_review_pending=False,reviewed_at=now,visually_reviewed_samples=18,review_notes='First077 clock10:40:51 exactly matches076PTS304.002. Sampled076 tail reaches10:40:52;077PTS2 clock10:40:58. Stationary foreground tank continues receiving visible white blocks, no boundary departure. No constant offset or gap-free coverage asserted.',aggregation_allowed=False);save(p,q)
+p=r/'manual_review_progress.json';q=read(p);assert q['reviewed_raw_samples'] in [1148,1171];q.update(reviewed_clips=[f'clip_{i:03}' for i in list(range(62))+list(range(63,78))],reviewed_raw_samples=1171,reviewed_boundary_samples=182,updated_at=now,note='77 clips sampled:000-061,063-077.062 excluded pre-reviewed fullclip.15 loaded departures;daily total unset;boundary/gap reconciliation incomplete.077 visible loading awaits next departure review.');save(p,q)
+p=b/'review.html';h=p.read_text(encoding='utf-8').replace('76 αποσπάσματα: 1148 αραιά δείγματα και 547 πυκνότερα δείγματα','77 αποσπάσματα: 1171 αραιά δείγματα και 547 πυκνότερα δείγματα');marker='<!-- review077 -->'
+if marker not in h:h=h.replace('<a href="day28_runs/manual_review_progress.json">',marker+'<p>Clip077:23 επιπλέον αραιά δείγματα δείχνουν γέμισμα της μπροστινής δεξαμενής με λευκά τεμάχια, χωρίς έξοδο στα δείγματα. Ελέγχθηκαν18 δείγματα ορίου076–077, με ακριβή αντιστοίχιση πρώτου καρέ στο προηγούμενο αρχείο. Σύνολο182 δείγματα ορίων. Παραμένουν15 επιβεβαιωμένες φορτωμένες έξοδοι στην πρόσθετη ουρά, χωρίς οριστικοποιημένο ημερήσιο σύνολο.</p><a href="day28_runs/manual_review_progress.json">')
+p.write_text(h,encoding='utf-8');print('Saved77 clips;1171 coarse;547 dense;182 boundary;15 loaded;daily unset.')

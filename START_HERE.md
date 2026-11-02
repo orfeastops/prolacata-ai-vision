@@ -1,3 +1,6 @@
+
+> **Current handoff (2 November 2026):** Read [HANDOFF_2026-11-02.md](HANDOFF_2026-11-02.md) first. It supersedes older goals and status. Local paths and artifact snapshots: [handoff_20261102/LOCAL_FILE_INDEX.json](handoff_20261102/LOCAL_FILE_INDEX.json). No USB transfer was performed.
+
 # Continue from the current state
 
 Snapshot date: **2026-10-27**, Europe/Athens.
@@ -68,3 +71,4 @@ This handoff does not prescribe another untested architecture as the solution. A
 - A transfer cut off by a clip boundary is censored, not a complete negative.
 - Nominal camera headers often say 30 fps while decoded native timestamps indicate about 15 fps. Preserve timestamps; do not reconstruct wall-clock time from frame number alone.
 - The user is frustrated by repeated plans without execution. Show completed artifacts and measured failures, communicate progress, and do not substitute manually annotated illustrations for model predictions.
+

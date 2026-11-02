@@ -1,0 +1,15 @@
+from pathlib import Path
+import json,hashlib
+from datetime import datetime,timezone
+b=Path('outputs/tank_transfer_training_v1/dataset_v2/heldout_counting');r=b/'day28_runs';d=r/'clip_079';now=datetime.now(timezone.utc).isoformat()
+def read(p):return json.loads(p.read_text())
+def save(p,q):p.write_text(json.dumps(q,indent=2))
+with (d/'source.mp4').open('rb') as f:sha=hashlib.file_digest(f,'sha256').hexdigest()
+assert sha==read(d/'source.json')['sha256']
+save(d/'source_hash_review.json',dict(checked_at=now,sha256=sha,matches_recorded=True,exact_duplicates_in_recorded_sources=[p.parent.name for p in r.glob('clip_*/source.json') if p.parent!=d and read(p).get('sha256')==sha]))
+q=read(d/'review_queue.json');assert not q['automatic_proposals'];q.update(review_status='sampled_visual_review_complete',reviewed_at=now,reviewed_raw_samples=12,reviewed_dense_samples=0,sampling_s=10,manual_reference_exhaustive=False,confirmed_loaded_count=0,manual_observed_loaded_departures=0,aggregation_allowed=False,evidence=['raw_review_10s/sheet_00.jpg','raw_review_10s/sheet_01.jpg'],review_notes='Visible white blocks handled into foreground tank10:50:12-10:52:04; tank stationary in samples. No room departure observed. Zero proposals compared with sampled raw reference, not exhaustive. Next departure link remains pending080 review.');save(d/'review_queue.json',q)
+p=r/'boundary_78_79/evidence.json';q=read(p);q.update(visual_review_pending=False,reviewed_at=now,visually_reviewed_samples=12,review_notes='Sampled078 tail10:49:51-57;079 first10:50:12 thenPTS2 clock10:50:16. No exact first-frame match in searched tail. Foreground tank and white blocks visible on both sides, no departure in samples. Clock gap retained; identity continuity across missing interval not independently proven.',aggregation_allowed=False);save(p,q)
+p=r/'manual_review_progress.json';q=read(p);assert q['reviewed_raw_samples'] in [1203,1215];q.update(reviewed_clips=[f'clip_{i:03}' for i in list(range(62))+list(range(63,80))],reviewed_raw_samples=1215,reviewed_boundary_samples=212,updated_at=now,note='79 clips sampled:000-061,063-079.062 excluded pre-reviewed fullclip.16 loaded departures;daily total unset;boundary/gap reconciliation incomplete.079 loading awaits080 review.');save(p,q)
+p=b/'review.html';h=p.read_text(encoding='utf-8').replace('78 αποσπάσματα: 1203 αραιά δείγματα και 602 πυκνότερα δείγματα','79 αποσπάσματα: 1215 αραιά δείγματα και 602 πυκνότερα δείγματα');marker='<!-- review079 -->'
+if marker not in h:h=h.replace('<a href="day28_runs/manual_review_progress.json">',marker+'<p>Clip079:12 επιπλέον αραιά δείγματα δείχνουν γέμισμα της μπροστινής δεξαμενής χωρίς έξοδο. Ελέγχθηκαν12 δείγματα ορίου078–079 (212 συνολικά). Διατηρείται κενό μεταξύ ορατών ωρών10:49:57 και10:50:12· δεν τεκμηριώνεται αδιάλειπτη συνέχεια μέσα στο κενό. Παραμένουν16 επιβεβαιωμένες φορτωμένες έξοδοι στην πρόσθετη ουρά, χωρίς τελικό ημερήσιο άθροισμα.</p><a href="day28_runs/manual_review_progress.json">')
+p.write_text(h,encoding='utf-8');print('Saved79 clips;1215 coarse;602 dense;212 boundary;16 loaded;daily unset.')

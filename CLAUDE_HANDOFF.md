@@ -1,3 +1,6 @@
+
+> **Current handoff (2 November 2026):** Read [HANDOFF_2026-11-02.md](HANDOFF_2026-11-02.md) first. It supersedes older goals and status. Local paths and artifact snapshots: [handoff_20261102/LOCAL_FILE_INDEX.json](handoff_20261102/LOCAL_FILE_INDEX.json). No USB transfer was performed.
+
 # Continue this project with Claude
 
 ## Latest model experiment: 28 October 2026
@@ -38,3 +41,4 @@ The previous v3 count-rate diagnostic fit all 12 training clip totals but only 1
 Visible blue gloves and white cheese can guide candidate regions; contact, bending or a hand entering a tank alone is not enough. Follow the actual cheese or a carried group from source tray to destination, preserve group quantity, and account for separate releases without double counting. Some gestures adjust existing cheese or discard crumbs. The footage can support richer visual annotation; assistant-generated labels still need source-level validation rather than being declared correct because another model agrees.
 
 No live cameras are connected. Automatic tank switching, camera 11/15 association, verified camera wall-clock reporting, and production acceptance remain unfinished. The October 28 event model trained on C01; C02 remained source-held-out.
+

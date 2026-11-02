@@ -1,3 +1,6 @@
+
+> **Current handoff (2 November 2026):** Read [HANDOFF_2026-11-02.md](HANDOFF_2026-11-02.md) first. It supersedes older goals and status. Local paths and artifact snapshots: [handoff_20261102/LOCAL_FILE_INDEX.json](handoff_20261102/LOCAL_FILE_INDEX.json). No USB transfer was performed.
+
 # Prolacata AI Vision
 
 ## Latest model experiment: 28 October 2026
@@ -73,3 +76,4 @@ Full report after restoration:
 Automatic tank changes, camera 11/15 association, verified wall-clock times and end-to-end continuous live acceptance testing remain unfinished.
 
 Third-party packages and pretrained weights retain their upstream terms. No new license for the overall project is assigned by this snapshot.
+

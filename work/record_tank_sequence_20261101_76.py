@@ -1,0 +1,18 @@
+import datetime as dt
+from record_tank_boundary_review_20261031 import read,save,merge,evidence,ROOT,BASE,OUT
+run='sequence_review_20261101_76';state=read(OUT/'continuation_state.json')
+if run in state.get('completed_curation_runs',[]):raise SystemExit('Already recorded')
+stamp=dt.datetime.now(dt.timezone.utc).isoformat()
+windows=[('follow134239_cam11',['13:42:39','13:42:45','13:42:50','13:42:55','13:43:00','13:43:05','13:43:10'],'Workers handle right-wall hose and equipment; parked jack and left-wall tank remain stationary. No observed tank transfer.'),('follow134504_cam11',['13:45:04','13:45:25','13:45:40','13:45:55','13:46:10','13:46:25','13:46:40','13:46:55','13:47:10','13:47:25','13:47:40','13:47:55','13:48:10','13:48:25','13:48:40','13:48:55','13:49:10'],'Workers wash foreground equipment and floor with hose, then carry hose toward rear wall. No fresh filling or tank transfer observed in samples. Stationary left-wall tank and parked jack remain. Intervening unreviewed files are not inferred continuous.')]
+inv=read(BASE/'archive_inventory.json')
+for name,clocks,obs in windows:
+ p=OUT/'sequence_review/20261015'/name/'frames.json';m=read(p);assert len(clocks)==len(m['samples'])
+ merge(OUT/'screening_source_reviews.json',[dict(review_id='20261015/'+name,date='20261015',split='train',camera=11,reviewer='assistant_visual_review',reviewed_at=stamp,source_member=m['source']['member'],source_sha256=m['source_sha256'],frames_manifest=str(p.relative_to(ROOT)),sampled_frames_visually_reviewed=len(clocks),reviewed_sheets=m['sheets'],accepted_complete_cycle=False,review_scope='All full-field sampled tiles and clocks inspected; not exhaustive native frames.',observation=obs,visible_clock_anchors=[dict(sample_index=i,source_pts_seconds=s['source_pts_seconds'],relative_pts_seconds=s['relative_pts_seconds'],visible_camera_clock=clocks[i],clock_read_uncertainty_seconds=1,image=s['image'],usable_for_clock_alignment=False) for i,s in enumerate(m['samples'])])],'review_id')
+ for r in inv['records']:
+  if r['member']==m['source']['member']:r.update(pixel_inspected=True,sha256=m['source_sha256'])
+labels=read(OUT/'reviewed_sequence_labels.json');save(OUT/'review_history/sequence_labels_before_20261101_76.json',labels)
+labels.append(dict(sequence_id='20261015_hosecleaning1345_cam11',date='20261015',split='train',camera=11,reviewer='assistant_visual_review',reviewed_at=stamp,review_status='accepted_negative_sequence',cycle_id=None,production_entry_count_target=0,dataset_release_accepted=False,negative_class='people_without_tank',tracked_tank_count=0,visible_camera_clock_interval=['13:45:25','13:48:25'],label_scope='Hose-cleaning worker activity only; stationary tanks and unseen activity excluded.',observation='Workers use hose on foreground machinery and floor; no tank carried in this tracked cleaning activity.',evidence=[evidence(m,1,13,p)]))
+save(OUT/'reviewed_sequence_labels.json',labels);save(BASE/'archive_inventory.json',inv)
+state['last_completed'].append('Batch76:24 additional full-field samples reviewed in two15Oct windows through13:49:10; one hose-cleaning negative added. No new production cycle. No labels inferred across skipped files.')
+state['priority_next']=['Prioritize other training-day production windows for full-cycle diversity.15Oct late material reviewed in follow134239 and follow134504 shows cleaning; intervening134305/134355 and later files remain unreviewed.','5Oct camera11 inventoried04:53:50-05:01:47 source is an unreviewed candidate for screening; inspect before assigning any stage.']+[x for x in state['priority_next'] if x.startswith('25/28')]
+state['completed_curation_runs'].append(run);state['updated_at']=stamp;save(OUT/'continuation_state.json',state)

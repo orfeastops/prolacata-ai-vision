@@ -1,0 +1,15 @@
+from pathlib import Path
+import json,hashlib
+from datetime import datetime,timezone
+b=Path('outputs/tank_transfer_training_v1/dataset_v2/heldout_counting');r=b/'day28_runs';d=r/'clip_081';now=datetime.now(timezone.utc).isoformat()
+def read(p):return json.loads(p.read_text())
+def save(p,q):p.write_text(json.dumps(q,indent=2))
+with (d/'source.mp4').open('rb') as f:sha=hashlib.file_digest(f,'sha256').hexdigest()
+assert sha==read(d/'source.json')['sha256']
+save(d/'source_hash_review.json',dict(checked_at=now,sha256=sha,matches_recorded=True,exact_duplicates_in_recorded_sources=[p.parent.name for p in r.glob('clip_*/source.json') if p.parent!=d and read(p).get('sha256')==sha]))
+q=read(d/'review_queue.json');assert not q['automatic_proposals'];q.update(review_status='sampled_visual_review_complete',reviewed_at=now,reviewed_raw_samples=8,reviewed_dense_samples=0,sampling_s=10,manual_reference_exhaustive=False,confirmed_loaded_count=0,manual_observed_loaded_departures=0,aggregation_allowed=False,evidence=['raw_review_10s/sheet_00.jpg'],review_notes='Foreground tank stationary with visible white blocks and handling10:54:54-10:56:05. No room departure in sampled reference; zero proposals checked, not exhaustive. Appearances outside room not counted.');save(d/'review_queue.json',q)
+p=r/'boundary_80_81/evidence.json';q=read(p);q.update(visual_review_pending=False,reviewed_at=now,visually_reviewed_samples=18,review_notes='First081 clock10:54:54 exactly matches080PTS164.798 and165.798. Sampled080 tail10:54:53;081PTS2 clock10:54:57. Foreground tank with white blocks stays stationary. No boundary departure. Repeated first/tail does not establish constant offset or gap-free coverage.',aggregation_allowed=False);save(p,q)
+p=r/'manual_review_progress.json';q=read(p);assert q['reviewed_raw_samples'] in [1232,1240];q.update(reviewed_clips=[f'clip_{i:03}' for i in list(range(62))+list(range(63,82))],reviewed_raw_samples=1240,reviewed_boundary_samples=243,updated_at=now,note='81 clips sampled:000-061,063-081.062 excluded pre-reviewed fullclip.17 loaded departures;daily total unset;boundary/gap reconciliation incomplete.081 sampled stationary loading and zero proposals.');save(p,q)
+p=b/'review.html';h=p.read_text(encoding='utf-8').replace('80 αποσπάσματα: 1232 αραιά δείγματα και 645 πυκνότερα δείγματα','81 αποσπάσματα: 1240 αραιά δείγματα και 645 πυκνότερα δείγματα');marker='<!-- review081 -->'
+if marker not in h:h=h.replace('<a href="day28_runs/manual_review_progress.json">',marker+'<p>Clip081:8 επιπλέον αραιά δείγματα δείχνουν γέμισμα χωρίς παρατηρημένη έξοδο, συμφωνώντας με τις μηδενικές προτάσεις στα ελεγμένα δείγματα. Ελέγχθηκαν18 δείγματα ορίου080–081 (243 συνολικά), με ακριβή αντιστοίχιση πρώτου καρέ. Παραμένουν17 επιβεβαιωμένες φορτωμένες έξοδοι στην πρόσθετη ουρά, χωρίς τελικό ημερήσιο άθροισμα.</p><a href="day28_runs/manual_review_progress.json">')
+p.write_text(h,encoding='utf-8');print('Saved81 clips;1240 coarse;645 dense;243 boundary;17 loaded;daily unset.')
